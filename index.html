@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alessandro Fava - Professionista IT. Portfolio personale con esperienza, competenze e formazione.">
+    <meta name="keywords" content="Alessandro Fava, IT, sviluppatore, portfolio, professionale">
+    <meta name="author" content="Alessandro Fava">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Alessandro Fava - Portfolio Professionale">
+    <meta property="og:description" content="Scopri il mio percorso professionale, le competenze e i progetti">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alessandrofava.com">
+    
+    <title>Alessandro Fava - Portfolio Professionale</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="skip-link">Vai al contenuto principale</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Menu principale">
+        <div class="navbar__container container">
+            <a href="#home" class="navbar__logo" aria-label="Home">AF</a>
+            
+            <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="navbar__menu">
+                <li><a href="#home" class="navbar__link">Home</a></li>
+                <li><a href="#about" class="navbar__link">Il Mio Valore</a></li>
+                <li><a href="#experience" class="navbar__link">Il Mio Percorso</a></li>
+                <li><a href="#help" class="navbar__link">Come Ti Aiuto</a></li>
+                <li><a href="#skills" class="navbar__link">Competenze</a></li>
+                <li><a href="#education" class="navbar__link">Formazione</a></li>
+                <li><a href="#contact" class="navbar__link">Contatti</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero section--hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title animate-fade-in">Alessandro Fava</h1>
+                    <p class="hero__subtitle animate-fade-in animate-delay-1">Senior Consultant - Business & Technical Advisory</p>
+                    <p class="hero__description animate-fade-in animate-delay-2">
+                        Consulente indipendente con oltre dieci anni di esperienza nella gestione di progetti complessi, 
+                        sviluppo commerciale e trasformazioni organizzative nel settore industriale. Specializzato in 
+                        tecnologie ceramiche, integrazione post-M&A e ottimizzazione processi manifatturieri.
+                    </p>
+                    <div class="hero__actions animate-fade-in animate-delay-3">
+                        <a href="#contact" class="btn btn--primary btn--large">Contattami</a>
+                        <a href="assets/Long_CV_Fava_Alessandro.pdf" class="btn btn--secondary btn--large" download aria-label="Scarica il mio CV">
+                            <svg class="icon icon--sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Scarica CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">Il Mio Valore</h2>
+                
+                <div class="text-center mb-16">
+                    <p class="text-xl text-neutral-600 mb-8">Trasformo complessità in opportunità</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="card scroll-reveal">
+                        <div class="card__body text-center">
+                            <div class="mb-6">
+                                <svg class="icon icon--xl text-primary mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">Integrazione M&A</h3>
+                            <p class="text-neutral-600">Unisco realtà diverse preservando identità</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card scroll-reveal">
+                        <div class="card__body text-center">
+                            <div class="mb-6">
+                                <svg class="icon icon--xl text-primary mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">Espansione Globale</h3>
+                            <p class="text-neutral-600">Apro mercati rispettando culture locali</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card scroll-reveal">
+                        <div class="card__body text-center">
+                            <div class="mb-6">
+                                <svg class="icon icon--xl text-primary mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">ROI Sostenibile</h3>
+                            <p class="text-neutral-600">Creo valore che dura nel tempo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="scroll-reveal">
+                        <div class="text-4xl font-bold text-primary mb-2">10+</div>
+                        <div class="text-neutral-600">Anni esperienza</div>
+                    </div>
+                    <div class="scroll-reveal">
+                        <div class="text-4xl font-bold text-primary mb-2">15+</div>
+                        <div class="text-neutral-600">Paesi serviti</div>
+                    </div>
+                    <div class="scroll-reveal">
+                        <div class="text-4xl font-bold text-primary mb-2">50+</div>
+                        <div class="text-neutral-600">Progetti completati</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Il Mio Percorso</h2>
+                <div class="text-center mb-16">
+                    <p class="text-xl text-neutral-600">Ogni ruolo una sfida. Ogni sfida un'opportunità di crescita.</p>
+                </div>
+                
+                <div class="timeline">
+                    <!-- Current Role -->
+                    <div class="timeline-item current">
+                        <div class="timeline-marker active"></div>
+                        <div class="timeline-content">
+                            <h3>Consulente Strategico Indipendente</h3>
+                            <p class="timeline-date">2021 - Presente</p>
+                            
+                            <div class="car-story">
+                                <div class="car-section challenge">
+                                    <h5>Sfida</h5>
+                                    <p>Clienti storici del settore ceramico necessitavano continuità di supporto 
+                                    durante transizioni tecnologiche critiche, senza il peso di una struttura corporate.</p>
+                                </div>
+                                <div class="car-section action">
+                                    <h5>Azione</h5>
+                                    <p>Ho creato un modello di consulenza agile, focalizzato su interventi mirati: 
+                                    valutazioni tecniche pre-investimento, ottimizzazione processi esistenti, 
+                                    accompagnamento in fasi di cambiamento organizzativo.</p>
+                                </div>
+                                <div class="car-section result">
+                                    <h5>Risultato</h5>
+                                    <p>Portfolio clienti consolidato nel settore ceramico. 
+                                    Supporto strategico per decisioni di investimento in nuove tecnologie. 
+                                    Gestione efficace dei ricambi garantendo continuità operativa ai clienti.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Breton Role -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Business Development Manager</h3>
+                            <h4>Breton S.p.A.</h4>
+                            <p class="timeline-date">2020 - 2021</p>
+                            
+                            <div class="car-story">
+                                    <div class="car-section challenge">
+                                        <h5>Sfida</h5>
+                                        <p>Post-acquisizione di Tecnema da parte di Breton: necessità di integrare 
+                                        prodotti nel CRM aziendale e allineare processi aziendali mantenendo 
+                                        l'efficacia commerciale nel mercato ceramico.</p>
+                                    </div>
+                                    <div class="car-section action">
+                                        <h5>Azione</h5>
+                                        <p>Ho gestito l'integrazione dei prodotti Tecnema nel sistema CRM Breton, 
+                                        sviluppato procedure post-M&A per l'allineamento dei processi aziendali 
+                                        e formato il personale commerciale Breton sui prodotti tecnici acquisiti.</p>
+                                    </div>
+                                    <div class="car-section result">
+                                        <h5>Risultato</h5>
+                                        <p>Formazione completata per 12 Area Manager Breton su prodotti complessi. 
+                                        Implementazione di procedure post-M&A che hanno garantito continuità operativa. 
+                                        L'integrazione è diventata un modello di riferimento interno.</p>
+                                    </div>
+                                <button class="story-detail" onclick="openSidePanel('bdm-panel')">
+                                    Approfondisci questa esperienza →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Chief Operations Officer</h3>
+                            <h4>Tecnema Breton Group</h4>
+                            <p class="timeline-date">2018 - 2019</p>
+                            
+                            <div class="car-story">
+                                    <div class="car-section challenge">
+                                        <h5>Sfida</h5>
+                                        <p>Tecnema, PMI specializzata nel fine linea ceramico, doveva scalare 
+                                        rapidamente per competere globalmente. Serviva un partner industriale 
+                                        ma senza perdere identità e agilità.</p>
+                                    </div>
+                                    <div class="car-section action">
+                                        <h5>Azione</h5>
+                                        <p>Come socio operativo, ho implementato direttamente il Piano Industriale: 
+                                        ristrutturazione organizzativa, allineamento processi operativi, espansione 
+                                        rete commerciale in nuovi mercati strategici mantenendo il DNA aziendale.</p>
+                                    </div>
+                                    <div class="car-section result">
+                                        <h5>Risultato</h5>
+                                        <p>Implementazione completa del Piano Industriale approvato dal CdA. 
+                                        Team passato da 30 a 36 elementi per sostenere la crescita. 
+                                        Nuovi mercati: Vietnam, Brasile, India. La JV ha posto le basi per l'acquisizione successiva.</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>International Sales Director</h3>
+                            <h4>Tecnema Technology</h4>
+                            <p class="timeline-date">2015 - 2018</p>
+                            
+                            <div class="car-story">
+                                    <div class="car-section challenge">
+                                        <h5>Sfida</h5>
+                                        <p>Il 70% del fatturato dipendeva dall'export ma senza una strategia 
+                                        strutturata. Mercati frammentati, partner non coordinati, 
+                                        necessità di incrementare il potenziale sui mercati USA ed Europa.</p>
+                                    </div>
+                                    <div class="car-section action">
+                                        <h5>Azione</h5>
+                                        <p>Ho ridisegnato la struttura commerciale: selezione partner basata 
+                                        su competenze tecniche, formazione continua, presenza diretta nelle 
+                                        fiere chiave. Sviluppo di nuovi prodotti innovativi per l'immissione sul mercato.</p>
+                                    </div>
+                                    <div class="car-section result">
+                                        <h5>Risultato</h5>
+                                        <p>Crescita significativa del business internazionale in 3 anni. 
+                                        Rete di 15 partner qualificati in altrettanti paesi. 
+                                        Sviluppo prodotti innovativi che hanno portato alla joint venture successiva.</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Area Sales Manager</h3>
+                            <h4>Tecnema Technology</h4>
+                            <p class="timeline-date">2013 - 2015</p>
+                            
+                            <div class="car-story">
+                                    <div class="car-section challenge">
+                                        <h5>Sfida</h5>
+                                        <p>Da ingegnere a commerciale: 7 paesi da gestire, culture diverse, 
+                                        prodotti complessi da spiegare. Il classico salto nel vuoto che 
+                                        o ti forma o ti distrugge.</p>
+                                    </div>
+                                    <div class="car-section action">
+                                        <h5>Azione</h5>
+                                        <p>Ho studiato ogni mercato, passato tempo in produzione per capire 
+                                        davvero i prodotti, ascoltato i clienti più che parlare. 
+                                        Costruito relazioni basate su competenza tecnica, non su pranzi.</p>
+                                    </div>
+                                    <div class="car-section result">
+                                        <h5>Risultato</h5>
+                                        <p>Acquisiti 4 clienti chiave che sono ancora reference. 
+                                        Aperto il mercato dei laterizi, completamente nuovo per l'azienda. 
+                                        Imparato che vendere significa prima di tutto capire.</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How I Help Section -->
+        <section id="help" class="section">
+            <div class="container">
+                <h2 class="section-title">Come Posso Aiutarti</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="card scroll-reveal">
+                        <div class="card__body text-center">
+                            <div class="mb-6">
+                                <svg class="icon icon--xl text-primary mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">Valutazione Investimenti</h3>
+                            <p class="text-neutral-600">Analizzo la fattibilità tecnica ed economica di nuove tecnologie per il settore ceramico</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card scroll-reveal">
+                        <div class="card__body text-center">
+                            <div class="mb-6">
+                                <svg class="icon icon--xl text-primary mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">Espansione Internazionale</h3>
+                            <p class="text-neutral-600">Supporto nell'apertura di nuovi mercati e selezione partner commerciali qualificati</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card scroll-reveal">
+                        <div class="card__body text-center">
+                            <div class="mb-6">
+                                <svg class="icon icon--xl text-primary mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">Integrazione M&A</h3>
+                            <p class="text-neutral-600">Guido l'integrazione post-acquisizione preservando il valore di entrambe le realtà</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <p class="text-lg text-neutral-600">Hai una sfida specifica? <a href="#contact" class="text-primary font-medium hover:text-primary-dark">Parliamone</a></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technical Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Competenze Tecniche</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card scroll-reveal">
+                        <div class="card__header">
+                            <h3 class="text-lg font-semibold">Business & Management</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge">Business Development</span>
+                                <span class="badge">Strategic Planning</span>
+                                <span class="badge">Business Planning</span>
+                                <span class="badge">Management</span>
+                                <span class="badge">Team Building</span>
+                                <span class="badge">Coaching</span>
+                                <span class="badge">Problem Solving</span>
+                                <span class="badge">Project Planning</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card scroll-reveal">
+                        <div class="card__header">
+                            <h3 class="text-lg font-semibold">Sales & Marketing</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge">Sales</span>
+                                <span class="badge">Negotiation</span>
+                                <span class="badge">CRM</span>
+                                <span class="badge">Relazioni con i clienti</span>
+                                <span class="badge">Acquisizione di nuovi clienti</span>
+                                <span class="badge">Social Media Marketing</span>
+                                <span class="badge">Digital Marketing</span>
+                                <span class="badge">Ricerche di mercato</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card scroll-reveal">
+                        <div class="card__header">
+                            <h3 class="text-lg font-semibold">Technical & Engineering</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge">Process Engineering</span>
+                                <span class="badge">Engineering</span>
+                                <span class="badge">AutoCAD</span>
+                                <span class="badge">SolidWorks</span>
+                                <span class="badge">Modellazione 3D</span>
+                                <span class="badge">Lean Manufacturing</span>
+                                <span class="badge">Manufacturing</span>
+                                <span class="badge">Product Development</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card scroll-reveal">
+                        <div class="card__header">
+                            <h3 class="text-lg font-semibold">Software & Tools</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge">Microsoft Office</span>
+                                <span class="badge">PowerPoint</span>
+                                <span class="badge">Software ERP</span>
+                                <span class="badge">Trello</span>
+                                <span class="badge">Adobe Photoshop</span>
+                                <span class="badge">Adobe Illustrator</span>
+                                <span class="badge">InDesign</span>
+                                <span class="badge">Google Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title">Formazione</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="card scroll-reveal">
+                        <div class="card__body text-center">
+                            <div class="text-4xl mb-4">🎓</div>
+                            <h3 class="text-xl font-semibold mb-2">Laurea Magistrale in Ingegneria</h3>
+                            <h4 class="text-lg font-medium text-primary mb-2">Università degli Studi di Modena e Reggio Emilia</h4>
+                            <p class="text-sm text-neutral-500 mb-4">2006 - 2009</p>
+                            <p class="text-neutral-600">Tesi: "Analisi di efficienza di una linea produttiva: il caso Tecnoceramica srl". 
+                            Specializzazione in Ingegneria Industriale con focus su processi produttivi e ottimizzazione.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card scroll-reveal">
+                        <div class="card__body text-center">
+                            <div class="text-4xl mb-4">📚</div>
+                            <h3 class="text-xl font-semibold mb-2">Laurea Triennale</h3>
+                            <h4 class="text-lg font-medium text-primary mb-2">Università degli Studi di Modena e Reggio Emilia</h4>
+                            <p class="text-sm text-neutral-500 mb-4">2002 - 2006</p>
+                            <p class="text-neutral-600">Tesi: "Analisi sull'applicazione dei principi del Lean Manufacturing nel mercato italiano". 
+                            Base solida in principi di ingegneria e metodologie di miglioramento continuo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card scroll-reveal">
+                        <div class="card__body text-center">
+                            <div class="text-4xl mb-4">🏆</div>
+                            <h3 class="text-xl font-semibold mb-2">Esame di Stato - Ingegneria</h3>
+                            <h4 class="text-lg font-medium text-primary mb-2">Università degli Studi di Modena e Reggio Emilia</h4>
+                            <p class="text-sm text-neutral-500 mb-4">2011 - 2012</p>
+                            <p class="text-neutral-600">Abilitazione professionale per l'esercizio della professione di Ingegnere - Sezione A - Settore Industriale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Restiamo in Contatto</h2>
+            <div class="text-center mb-12">
+                <p class="text-lg text-neutral-600 max-w-3xl mx-auto">
+                    Basato a Modena, Emilia-Romagna. Sono sempre interessato a nuove opportunità 
+                    e collaborazioni nel Business Development e Sales Engineering. 
+                    Non esitare a contattarmi per progetti, consulenze o networking professionale.
+                </p>
+            </div>
+            
+            <div class="flex justify-center gap-8 mb-12">
+                <a href="mailto:fava.alessandro83@gmail.com" class="btn btn--ghost" aria-label="Invia email">
+                    <svg class="icon icon--sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    Email
+                </a>
+                
+                <a href="https://www.linkedin.com/in/alessandrofava/" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" aria-label="Profilo LinkedIn">
+                    <svg class="icon icon--sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    LinkedIn
+                </a>
+                
+                <a href="https://github.com/alessandrofava" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" aria-label="Profilo GitHub">
+                    <svg class="icon icon--sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+            
+            <div class="text-center pt-8 border-t border-neutral-200">
+                <p class="text-sm text-neutral-500">&copy; 2024 Alessandro Fava. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Panel Overlay -->
+    <div id="panel-overlay" class="panel-overlay" onclick="closeSidePanel('bdm-panel')"></div>
+    
+    <!-- Side Panel for Business Development Manager Details -->
+    <div id="bdm-panel" class="side-panel" role="complementary" aria-labelledby="panel-title" aria-hidden="true">
+        <div class="panel-content">
+            <div class="panel-header">
+                <h3 id="panel-title">Business Development Manager</h3>
+                <button class="panel-close" onclick="closeSidePanel('bdm-panel')" aria-label="Chiudi pannello">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="panel-body">
+                <h4>Business Development Post-Acquisizione in Breton</h4>
+                <p class="panel-subtitle">Uno Studio sull'Integrazione Aziendale</p>
+                <p>
+                    Dopo l'operazione di M&A, ho assunto la responsabilità della linea di prodotti Tecnema all'interno di Breton. 
+                    Il mandato era chiaro: espandere la redditività della divisione ceramica sfruttando i canali di distribuzione 
+                    esistenti e costruendone di nuovi.
+                </p>
+                
+                <h5>Funzioni Chiave Eseguite:</h5>
+                <ul class="panel-list">
+                    <li>Ottimizzazione dei processi di gestione ordini e supporto tecnico tra i dipartimenti</li>
+                    <li>Sviluppo di programmi di formazione basati sulle competenze per l'organizzazione vendite</li>
+                    <li>Implementazione di disciplina sui prezzi e sviluppo prodotti basato sui gap di mercato</li>
+                    <li>Gestione diretta del P&L per i mercati USA, Europa, UK e Turchia</li>
+                    <li>Costruzione di processi sistematici di qualificazione prospect basati sull'economia del cliente</li>
+                </ul>
+                
+                <h5>Lezioni Critiche dal Campo:</h5>
+                <p>
+                    La vera formazione è arrivata navigando la complessità di una multinazionale durante l'integrazione post-fusione. 
+                    Sono emerse due sfide fondamentali: il consolidamento degli asset e l'allineamento del capitale umano.
+                </p>
+                <p>
+                    La soluzione non era complicata, solo difficile da eseguire: pianificazione metodica, comunicazione trasparente 
+                    e coinvolgimento genuino degli stakeholder.
+                </p>
+                <p>
+                    L'esperienza ha rafforzato un principio senza tempo: <strong>nelle M&A, la cultura si mangia la strategia a colazione</strong>. 
+                    L'integrazione tecnica è aritmetica semplice; l'integrazione umana è calcolo avanzato.
+                </p>
+                
+                <div class="panel-highlight">
+                    <h5>Risultato Finale:</h5>
+                    <p>
+                        Ho generato una crescita misurabile dei ricavi costruendo al contempo conoscenza istituzionale che si accumula nel tempo. 
+                        Questo è l'unico tipo di successo che conta davvero.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to top button -->
+    <button class="btn btn--primary hidden" id="back-to-top" aria-label="Torna su" title="Torna su" style="position: fixed; bottom: 2rem; right: 2rem; z-index: var(--z-fixed); border-radius: var(--border-radius-full); width: 48px; height: 48px; padding: 0;">
+        <svg class="icon icon--sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+    
+    <!-- JavaScript -->
+    <script src="assets/js/script.min.js" defer></script>
+</body>
+</html>
