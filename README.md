@@ -1,112 +1,116 @@
-# Portfolio Personale - Alessandro Fava
+# 🌟 Alessandro Fava - Portfolio Website
 
-Sito web portfolio personale minimale e professionale basato su HTML5, CSS3 e JavaScript vanilla.
+Modern, responsive portfolio website for Alessandro Fava - Senior Consultant in Business & Technical Advisory.
 
-## 🌟 Caratteristiche
+## 🚀 Live Website
+Visit the live website: [https://favaalessandro.github.io/Landing-Page-Alessandro-Fava/](https://favaalessandro.github.io/Landing-Page-Alessandro-Fava/)
 
-- **Design Minimale**: Layout pulito e professionale con ampio spazio bianco
-- **Completamente Responsivo**: Ottimizzato per desktop, tablet e mobile
-- **Dark Mode**: Toggle tra tema chiaro e scuro con persistenza delle preferenze
-- **Animazioni Fluide**: Transizioni e animazioni subtle allo scroll
-- **Performance Ottimizzata**: CSS e JS minificati per caricamento veloce
-- **SEO Friendly**: Meta tag ottimizzati per motori di ricerca
-- **Accessibilità WCAG**: Compliant con gli standard di accessibilità
+## ✨ Features
 
-## 📁 Struttura del Progetto
+- **Modern Design System**: Corporate color palette inspired by professional consulting firms
+- **Interactive Timeline**: Dynamic experience timeline with Challenge-Action-Result storytelling
+- **Responsive Design**: Mobile-first approach optimized for all devices
+- **Performance Optimized**: Lazy loading, minified assets, and efficient animations
+- **Accessibility**: WCAG 2.1 AA compliant with proper ARIA labels and keyboard navigation
+- **Side Panels**: Detailed experience insights in slide-out panels
+- **Smooth Animations**: Scroll-triggered reveals and micro-interactions
+
+## 🛠️ Tech Stack
+
+- **HTML5** - Semantic markup with accessibility features
+- **CSS3** - Modern design system with custom properties
+- **Vanilla JavaScript** - Performance-optimized interactions
+- **GitHub Pages** - Automated deployment
+- **Git** - Version control
+
+## 📱 Sections
+
+- **Hero** - Introduction and call-to-action
+- **Il Mio Valore** - Value proposition with key metrics
+- **Il Mio Percorso** - Professional timeline with detailed experience
+- **Come Ti Aiuto** - Services offered
+- **Competenze** - Technical skills organized by category
+- **Formazione** - Educational background
+- **Contatti** - Contact information and social links
+
+## 🎨 Design System
+
+### Colors
+- **Primary**: #1E3A8A (Corporate Blue)
+- **Secondary**: #059669 (Success Green)
+- **Accent**: #F59E0B (Gold)
+- **Neutrals**: Sophisticated gray scale
+
+### Typography
+- **Font Family**: Inter
+- **Weights**: 300-800
+- **Responsive Scale**: Mobile-first sizing
+
+## 📁 Project Structure
 
 ```
-sito/
-├── index.html              # Pagina principale
 ├── assets/
 │   ├── css/
-│   │   ├── style.css      # CSS principale (sviluppo)
-│   │   └── style.min.css  # CSS minificato (produzione)
+│   │   ├── style.css         # Main stylesheet
+│   │   └── style.min.css     # Minified version
 │   ├── js/
-│   │   ├── script.js      # JavaScript principale (sviluppo)
-│   │   └── script.min.js  # JavaScript minificato (produzione)
-│   └── images/           # Cartella per immagini e favicon
-└── README.md             # Documentazione
+│   │   ├── script.js         # Main JavaScript
+│   │   └── script.min.js     # Minified version
+│   └── Long_CV_Fava_Alessandro.pdf
+├── .github/
+│   └── workflows/
+│       └── deploy.yml        # GitHub Pages deployment
+├── index.html                # Main HTML file
+├── .gitignore               # Git ignore rules
+└── README.md                # This file
 ```
 
-## 🚀 Funzionalità
+## 🚀 Local Development
 
-### Navigazione
-- Menu sticky che si riduce allo scroll
-- Smooth scroll tra le sezioni
-- Evidenziazione automatica della sezione attiva
-- Menu hamburger responsive per mobile
-
-### Sezioni
-1. **Hero Section**: Presentazione con nome e titolo professionale
-2. **Chi Sono**: Summary del profilo professionale
-3. **Esperienza**: Timeline delle posizioni lavorative
-4. **Competenze**: Griglia delle skill tecniche organizzate per categoria
-5. **Formazione**: Percorso educativo e certificazioni
-6. **Contatti**: Link social e informazioni di contatto
-
-### Interattività
-- Dark mode toggle con persistenza in localStorage
-- Animazioni fade-in allo scroll
-- Pulsante "Torna su" che appare dopo lo scroll
-- Lazy loading per immagini (predisposto)
-- Throttling degli eventi scroll per performance
-
-## 🎨 Personalizzazione
-
-### Modificare i Contenuti
-1. Apri `index.html`
-2. Sostituisci i contenuti placeholder con le tue informazioni reali
-3. Aggiorna i link social nel footer
-4. Sostituisci l'email di contatto
-
-### Modificare i Colori
-Nel file `style.css`, modifica le variabili CSS nella sezione `:root`:
-```css
-:root {
-    --primary-color: #0077B5;  /* Colore principale */
-    --primary-hover: #005885;  /* Colore hover */
-    --text-dark: #1a1a1a;      /* Testo scuro */
-    --text-light: #666666;     /* Testo chiaro */
-    /* ... altre variabili ... */
-}
-```
-
-### Aggiungere il CV
-1. Aggiungi il tuo CV in formato PDF nella cartella `assets/`
-2. Rinominalo come `Alessandro_Fava_CV.pdf` o aggiorna il link nel codice
-
-## 💻 Utilizzo
-
-1. Apri `index.html` nel browser
-2. Per sviluppo locale, puoi usare un server locale come:
+1. Clone the repository:
    ```bash
-   python -m http.server 8000
-   # oppure
-   npx serve
+   git clone https://github.com/favaalessandro/Landing-Page-Alessandro-Fava.git
    ```
 
-## 📱 Compatibilità Browser
+2. Open `index.html` in your browser or serve with a local server:
+   ```bash
+   python -m http.server 8000
+   # or
+   npx serve .
+   ```
 
-- Chrome/Edge (ultimi 2 versioni)
-- Firefox (ultimi 2 versioni)
-- Safari (ultimi 2 versioni)
-- Mobile browsers (iOS Safari, Chrome Android)
+## 📝 Content Management
 
-## ⚡ Performance
+- **Experience Updates**: Edit the timeline items in `index.html`
+- **Skills**: Update the badge lists in the skills section
+- **CV**: Replace `assets/Long_CV_Fava_Alessandro.pdf` with updated version
+- **Styling**: Modify CSS custom properties in `style.css`
 
-- Lighthouse Score: 95+ su tutti i parametri
-- First Contentful Paint: < 1.5s
-- Time to Interactive: < 3s
-- CSS/JS minificati per produzione
+## ⚡ Performance Features
 
-## ♿ Accessibilità
+- **Lighthouse Score**: 95+ on all metrics
+- **First Contentful Paint**: < 1.5s
+- **Time to Interactive**: < 3s
+- **Minified Assets**: CSS/JS optimized for production
+- **Lazy Loading**: Images loaded on demand
+- **Scroll Throttling**: Optimized scroll event handling
 
-- Navigazione da tastiera completa
-- Screen reader friendly
-- ARIA labels appropriati
-- Contrasto colori WCAG AA compliant
-- Skip link per contenuto principale
+## ♿ Accessibility Features
 
-## 📄 Licenza
+- **Keyboard Navigation**: Full keyboard accessibility
+- **Screen Reader Support**: Proper ARIA labels and structure
+- **Color Contrast**: WCAG AA compliant contrast ratios
+- **Skip Links**: Skip to main content functionality
+- **Focus Management**: Proper focus indicators and management
 
-© 2024 Alessandro Fava. Tutti i diritti riservati.
+## 🤖 AI-Generated
+
+This website was designed and developed with assistance from [Claude Code](https://claude.ai/code), showcasing modern web development practices and professional portfolio standards.
+
+## 📄 License
+
+© 2024 Alessandro Fava. All rights reserved.
+
+---
+
+**Professional Consultant** | **Business Development** | **Technical Advisory**
