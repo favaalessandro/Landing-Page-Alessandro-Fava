@@ -23,8 +23,7 @@ class LanguageSwitcher {
         // Show the opposite language (the one we can switch to)
         const targetLang = this.currentLang === 'it' ? 'en' : 'it';
         switcher.innerHTML = `
-            <button class="language-switcher__btn" aria-label="Switch language" data-lang="${targetLang}">
-                <span class="language-switcher__flag">${targetLang === 'it' ? '🇮🇹' : '🇬🇧'}</span>
+            <button class="language-switcher__btn" aria-label="Switch to ${targetLang === 'it' ? 'Italian' : 'English'}" data-lang="${targetLang}">
                 <span class="language-switcher__text">${targetLang.toUpperCase()}</span>
             </button>
         `;
@@ -51,8 +50,8 @@ class LanguageSwitcher {
         if (btn) {
             const targetLang = this.currentLang === 'it' ? 'en' : 'it';
             btn.dataset.lang = targetLang;
-            btn.querySelector('.language-switcher__flag').textContent = targetLang === 'it' ? '🇮🇹' : '🇬🇧';
             btn.querySelector('.language-switcher__text').textContent = targetLang.toUpperCase();
+            btn.setAttribute('aria-label', `Switch to ${targetLang === 'it' ? 'Italian' : 'English'}`);
         }
         
         // Update document language

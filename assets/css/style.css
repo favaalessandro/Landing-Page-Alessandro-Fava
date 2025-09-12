@@ -1280,14 +1280,10 @@ a:hover {
     outline-offset: 2px;
 }
 
-.language-switcher__flag {
-    font-size: 1.2em;
-    line-height: 1;
-}
-
 .language-switcher__text {
     font-weight: var(--font-weight-bold);
-    letter-spacing: 0.025em;
+    letter-spacing: 0.05em;
+    font-size: var(--font-size-sm);
 }
 
 /* Adjust navbar layout when language switcher is present */
