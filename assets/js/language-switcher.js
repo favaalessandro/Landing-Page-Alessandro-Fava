@@ -145,16 +145,20 @@ class LanguageSwitcher {
             }
         });
         
-        // Update stats
-        const stats = document.querySelectorAll('#about .scroll-reveal > div');
-        const statKeys = ['years', 'countries', 'projects'];
-        
-        stats.forEach((stat, index) => {
-            const text = stat.querySelector('.text-neutral-600');
-            if (text && statKeys[index]) {
-                text.textContent = t.about.stats[statKeys[index]];
-            }
-        });
+        // Update stats - preserve numbers, only update text labels
+        const statsContainer = document.querySelector('#about .grid.text-center');
+        if (statsContainer) {
+            const statItems = statsContainer.querySelectorAll('.scroll-reveal');
+            const statKeys = ['years', 'countries', 'projects'];
+            
+            statItems.forEach((stat, index) => {
+                const textElement = stat.querySelector('.text-neutral-600');
+                if (textElement && statKeys[index]) {
+                    // Only update the description text, numbers are preserved
+                    textElement.textContent = t.about.stats[statKeys[index]];
+                }
+            });
+        }
     }
     
     updateExperienceSection(t) {
