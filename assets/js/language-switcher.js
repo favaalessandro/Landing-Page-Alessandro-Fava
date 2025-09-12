@@ -20,10 +20,12 @@ class LanguageSwitcher {
         // Create the language switcher container
         const switcher = document.createElement('div');
         switcher.className = 'language-switcher';
+        // Show the opposite language (the one we can switch to)
+        const targetLang = this.currentLang === 'it' ? 'en' : 'it';
         switcher.innerHTML = `
-            <button class="language-switcher__btn" aria-label="Switch language" data-lang="${this.currentLang}">
-                <span class="language-switcher__flag">${this.currentLang === 'it' ? '🇮🇹' : '🇬🇧'}</span>
-                <span class="language-switcher__text">${this.currentLang.toUpperCase()}</span>
+            <button class="language-switcher__btn" aria-label="Switch language" data-lang="${targetLang}">
+                <span class="language-switcher__flag">${targetLang === 'it' ? '🇮🇹' : '🇬🇧'}</span>
+                <span class="language-switcher__text">${targetLang.toUpperCase()}</span>
             </button>
         `;
         
@@ -44,12 +46,13 @@ class LanguageSwitcher {
         localStorage.setItem('language', this.currentLang);
         this.applyLanguage(this.currentLang);
         
-        // Update button appearance
+        // Update button appearance - show the opposite language (the one we can switch to)
         const btn = document.querySelector('.language-switcher__btn');
         if (btn) {
-            btn.dataset.lang = this.currentLang;
-            btn.querySelector('.language-switcher__flag').textContent = this.currentLang === 'it' ? '🇮🇹' : '🇬🇧';
-            btn.querySelector('.language-switcher__text').textContent = this.currentLang.toUpperCase();
+            const targetLang = this.currentLang === 'it' ? 'en' : 'it';
+            btn.dataset.lang = targetLang;
+            btn.querySelector('.language-switcher__flag').textContent = targetLang === 'it' ? '🇮🇹' : '🇬🇧';
+            btn.querySelector('.language-switcher__text').textContent = targetLang.toUpperCase();
         }
         
         // Update document language
