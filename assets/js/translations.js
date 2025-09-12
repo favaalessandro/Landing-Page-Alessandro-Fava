@@ -31,15 +31,15 @@ const translations = {
             cards: {
                 integration: {
                     title: "Integrazione M&A",
-                    desc: "Unisco realtà diverse preservando identità"
+                    desc: "Armonizzazione di processi e culture aziendali per massimizzare le sinergie"
                 },
                 expansion: {
                     title: "Espansione Globale",
-                    desc: "Apro mercati rispettando culture locali"
+                    desc: "Strategie di internazionalizzazione su misura per ogni mercato"
                 },
                 roi: {
                     title: "ROI Sostenibile",
-                    desc: "Creo valore che dura nel tempo"
+                    desc: "Risultati misurabili con benefici a lungo termine"
                 }
             },
             stats: {
@@ -282,15 +282,15 @@ const translations = {
             cards: {
                 integration: {
                     title: "M&A Integration",
-                    desc: "Merging different realities while preserving identity"
+                    desc: "Harmonizing processes and corporate cultures to maximize synergies"
                 },
                 expansion: {
                     title: "Global Expansion",
-                    desc: "Opening markets while respecting local cultures"
+                    desc: "Tailored internationalization strategies for each market"
                 },
                 roi: {
                     title: "Sustainable ROI",
-                    desc: "Creating value that lasts over time"
+                    desc: "Measurable results with long-term benefits"
                 }
             },
             stats: {
