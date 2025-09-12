@@ -1233,3 +1233,89 @@ a:hover {
         display: none;
     }
 }
+
+/* ========================================
+   LANGUAGE SWITCHER
+======================================== */
+
+.language-switcher {
+    position: fixed;
+    top: var(--space-4);
+    right: var(--space-4);
+    z-index: calc(var(--z-fixed) + 1);
+}
+
+@media (min-width: 768px) {
+    .language-switcher {
+        position: static;
+        margin-left: var(--space-8);
+    }
+}
+
+.language-switcher__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    background-color: white;
+    border: var(--border-width-2) solid var(--color-primary);
+    border-radius: var(--border-radius-full);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    min-height: 36px;
+}
+
+.language-switcher__btn:hover {
+    background-color: var(--color-primary);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+.language-switcher__btn:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.language-switcher__flag {
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+.language-switcher__text {
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.025em;
+}
+
+/* Adjust navbar layout when language switcher is present */
+@media (min-width: 768px) {
+    .navbar__container {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: var(--space-4);
+    }
+    
+    .navbar__menu {
+        justify-content: center;
+    }
+}
+
+/* Mobile menu adjustments */
+@media (max-width: 767px) {
+    .navbar__menu.active {
+        display: flex;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        padding: var(--space-4);
+        box-shadow: var(--shadow-lg);
+        border-bottom: var(--border-width) solid var(--color-neutral-200);
+    }
+}
