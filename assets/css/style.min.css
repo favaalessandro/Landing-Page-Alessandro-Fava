@@ -1710,6 +1710,31 @@ a:hover {
     line-height: var(--line-height-relaxed);
 }
 
+/* --- Deep Dive Button (opens side panel) --- */
+.netflix-card__deepdive {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(5, 150, 105, 0.12));
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: var(--border-radius-lg);
+    color: var(--color-primary-light);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    padding: var(--space-2) var(--space-5);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    font-family: var(--font-family-primary);
+}
+
+.netflix-card__deepdive:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(5, 150, 105, 0.25));
+    border-color: rgba(59, 130, 246, 0.5);
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
 /* --- Pagination Dots --- */
 .netflix-carousel__dots {
     display: flex;
