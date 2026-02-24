@@ -2370,6 +2370,183 @@ section[id] {
 }
 
 /* ========================================
+   MEDIA ELEMENTS — Photos, Logos, Images
+======================================== */
+
+/* --- Hero Profile Photo --- */
+.hero__photo {
+    width: 140px;
+    height: 140px;
+    border-radius: var(--border-radius-full);
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    object-fit: cover;
+    margin: 0 auto var(--space-6);
+    display: block;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transition: all var(--transition-normal);
+}
+
+.hero__photo:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 30px rgba(229, 9, 20, 0.3);
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    .hero__photo {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .hero__photo {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* --- Netflix Card Company Logo --- */
+.netflix-card__logo {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--border-radius-lg);
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+.netflix-card__header-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-2);
+}
+
+/* --- Netflix Card Cover Image --- */
+.netflix-card__cover {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--border-radius-lg);
+    margin-top: var(--space-4);
+    opacity: 0.85;
+    transition: all var(--transition-normal);
+}
+
+.netflix-card:hover .netflix-card__cover {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+/* --- Case Study Modal Images --- */
+.case-modal__gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    margin: var(--space-6) 0;
+}
+
+@media (min-width: 640px) {
+    .case-modal__gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.case-modal__image {
+    width: 100%;
+    border-radius: var(--border-radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.case-modal__image:hover {
+    border-color: rgba(229, 9, 20, 0.3);
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Education University Logo --- */
+.education-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--border-radius-xl);
+    object-fit: contain;
+    margin: 0 auto var(--space-4);
+    display: block;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Testimonial Author Photo --- */
+.testimonial-quote__photo {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--border-radius-full);
+    object-fit: cover;
+    margin: var(--space-4) auto 0;
+    display: block;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* --- Social Preview / OG Image placeholder --- */
+.hero__video-container {
+    position: relative;
+    max-width: 700px;
+    margin: var(--space-8) auto 0;
+    border-radius: var(--border-radius-2xl);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.hero__video-container video,
+.hero__video-container img {
+    width: 100%;
+    display: block;
+}
+
+.hero__video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    background: rgba(229, 9, 20, 0.9);
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    color: #ffffff;
+    transition: all var(--transition-normal);
+    box-shadow: 0 4px 20px rgba(229, 9, 20, 0.4);
+}
+
+.hero__video-play:hover {
+    background: var(--color-primary);
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 8px 30px rgba(229, 9, 20, 0.5);
+}
+
+/* --- Lazy load fade-in --- */
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+img[data-src].loaded,
+img:not([data-src]) {
+    opacity: 1;
+}
+
+/* ========================================
    LARGE SCREEN BREAKPOINTS (Netflix density)
 ======================================== */
 
