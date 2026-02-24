@@ -109,15 +109,32 @@ class LanguageSwitcher {
     }
     
     updateHeroSection(t) {
+        const tagline = document.querySelector('.hero__tagline');
+        if (tagline) tagline.textContent = t.hero.tagline;
+
         const subtitle = document.querySelector('.hero__subtitle');
         if (subtitle) subtitle.textContent = t.hero.subtitle;
-        
+
         const description = document.querySelector('.hero__description');
         if (description) description.textContent = t.hero.description;
-        
+
+        // Update trust indicators
+        if (t.hero.trust) {
+            const trustItems = document.querySelectorAll('.hero__trust-item');
+            const trustKeys = ['years', 'countries', 'projects'];
+            trustItems.forEach((item, index) => {
+                if (trustKeys[index] && t.hero.trust[trustKeys[index]]) {
+                    const num = item.querySelector('.hero__trust-number');
+                    const label = item.querySelector('.hero__trust-label');
+                    if (num) num.textContent = t.hero.trust[trustKeys[index]].number;
+                    if (label) label.textContent = t.hero.trust[trustKeys[index]].label;
+                }
+            });
+        }
+
         const contactBtn = document.querySelector('.hero__actions .btn--primary');
         if (contactBtn) contactBtn.textContent = t.hero.contactBtn;
-        
+
         const downloadBtn = document.querySelector('.hero__actions .btn--secondary');
         if (downloadBtn) {
             const icon = downloadBtn.querySelector('svg');
@@ -161,8 +178,16 @@ class LanguageSwitcher {
                 }
             });
         }
+
+        // Update quote
+        if (t.about.quote) {
+            const quoteBlock = document.querySelector('.testimonial-quote blockquote p');
+            if (quoteBlock) quoteBlock.textContent = '"' + t.about.quote + '"';
+            const quoteCite = document.querySelector('.testimonial-quote cite');
+            if (quoteCite) quoteCite.textContent = t.about.quoteAuthor;
+        }
     }
-    
+
     updateExperienceSection(t) {
         const title = document.querySelector('#experience .section-title');
         if (title) title.textContent = t.experience.title;
@@ -298,10 +323,16 @@ class LanguageSwitcher {
     updateContactSection(t) {
         const title = document.querySelector('#contact .section-title');
         if (title) title.textContent = t.contact.title;
-        
+
         const description = document.querySelector('#contact .text-lg');
         if (description) description.textContent = t.contact.description;
-        
+
+        // Update tagline
+        if (t.contact.tagline) {
+            const tagline = document.querySelector('#contact .text-xl');
+            if (tagline) tagline.textContent = t.contact.tagline;
+        }
+
         // Update contact buttons
         const emailBtn = document.querySelector('a[href^="mailto"]');
         if (emailBtn) {
