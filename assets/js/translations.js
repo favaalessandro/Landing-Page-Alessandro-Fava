@@ -1,7 +1,7 @@
 const translations = {
     it: {
         // Meta
-        metaDescription: "Alessandro Fava - Professionista IT. Portfolio personale con esperienza, competenze e formazione.",
+        metaDescription: "Alessandro Fava - Senior Consultant specializzato in integrazione post-M&A, espansione internazionale e tecnologie ceramiche. 10+ anni di esperienza nella consulenza strategica industriale.",
         metaTitle: "Alessandro Fava - Portfolio Professionale",
         skipContent: "Vai al contenuto principale",
         
@@ -218,7 +218,7 @@ const translations = {
             email: "Email",
             linkedIn: "LinkedIn",
             gitHub: "GitHub",
-            copyright: "© 2024 Alessandro Fava. Tutti i diritti riservati."
+            copyright: "© 2025 Alessandro Fava. Tutti i diritti riservati."
         },
         
         // Side Panel
@@ -252,7 +252,7 @@ const translations = {
     
     en: {
         // Meta
-        metaDescription: "Alessandro Fava - IT Professional. Personal portfolio with experience, skills and education.",
+        metaDescription: "Alessandro Fava - Senior Consultant specialized in post-M&A integration, international expansion and ceramic technologies. 10+ years of industrial strategic consulting experience.",
         metaTitle: "Alessandro Fava - Professional Portfolio",
         skipContent: "Skip to main content",
         
@@ -469,7 +469,7 @@ const translations = {
             email: "Email",
             linkedIn: "LinkedIn",
             gitHub: "GitHub",
-            copyright: "© 2024 Alessandro Fava. All rights reserved."
+            copyright: "© 2025 Alessandro Fava. All rights reserved."
         },
         
         // Side Panel

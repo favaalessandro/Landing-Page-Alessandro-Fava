@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://favaalessandro.github.io/Landing-Page-Alessandro-Fava/sitemap.xml

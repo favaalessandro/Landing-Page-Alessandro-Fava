@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Build & Deploy to GitHub Pages
 
 on:
   push:
@@ -17,24 +17,52 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  build-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-      
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install build tools
+      run: npm install -g terser cssnano-cli html-minifier-terser
+
+    - name: Create build directory
+      run: mkdir -p build/assets/css build/assets/js build/assets/images
+
+    - name: Minify CSS
+      run: npx cssnano assets/css/style.css build/assets/css/style.min.css
+
+    - name: Minify JavaScript
+      run: |
+        npx terser assets/js/translations.js -o build/assets/js/translations.min.js -c -m
+        npx terser assets/js/language-switcher.js -o build/assets/js/language-switcher.min.js -c -m
+        npx terser assets/js/script.js -o build/assets/js/script.min.js -c -m
+
+    - name: Copy HTML and static assets
+      run: |
+        cp index.html build/
+        cp assets/Long_CV_Fava_Alessandro.pdf build/assets/
+        cp robots.txt build/ 2>/dev/null || true
+        cp sitemap.xml build/ 2>/dev/null || true
+        cp -r assets/images/* build/assets/images/ 2>/dev/null || true
+
     - name: Setup Pages
       uses: actions/configure-pages@v4
-      
+
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: '.'
-        
+        path: 'build'
+
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4

@@ -233,7 +233,8 @@ class LanguageSwitcher {
         const cta = document.querySelector('#help .text-lg');
         if (cta) {
             const link = cta.querySelector('a');
-            cta.innerHTML = t.help.cta + ' ';
+            cta.textContent = '';
+            cta.append(t.help.cta + ' ');
             if (link) {
                 link.textContent = t.help.ctaLink;
                 cta.appendChild(link);
@@ -365,7 +366,14 @@ class LanguageSwitcher {
             if (paragraphs[1]) paragraphs[1].textContent = t.panel.lessonsText1;
             if (paragraphs[2]) paragraphs[2].textContent = t.panel.lessonsText2;
             if (paragraphs[3]) {
-                paragraphs[3].innerHTML = t.panel.lessonsText3 + ' <strong>' + t.panel.lessonsText4 + '</strong>' + t.panel.lessonsText5;
+                paragraphs[3].textContent = '';
+                paragraphs[3].append(
+                    t.panel.lessonsText3 + ' ',
+                    Object.assign(document.createElement('strong'), {
+                        textContent: t.panel.lessonsText4
+                    }),
+                    t.panel.lessonsText5
+                );
             }
             
             // Update final result
