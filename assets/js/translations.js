@@ -61,10 +61,14 @@ const translations = {
         experience: {
             title: "Il Mio Percorso",
             tagline: "Ogni ruolo una sfida. Ogni sfida un'opportunità di crescita.",
+            expandLabel: "Scopri di più",
+            closeLabel: "Chiudi",
             roles: {
                 current: {
                     title: "Consulente Strategico Indipendente",
                     date: "2021 - Presente",
+                    badge: "Attuale",
+                    preview: "Consulenza agile per il settore ceramico: valutazioni tecniche, ottimizzazione processi, accompagnamento al cambiamento.",
                     challenge: {
                         title: "Sfida",
                         desc: "Clienti storici del settore ceramico necessitavano continuità di supporto durante transizioni tecnologiche critiche, senza il peso di una struttura corporate."
@@ -82,6 +86,7 @@ const translations = {
                     title: "Business Development Manager",
                     company: "Breton S.p.A.",
                     date: "2020 - 2021",
+                    preview: "Integrazione post-M&A: CRM, formazione 12 Area Manager, procedure per continuità operativa.",
                     challenge: {
                         title: "Sfida",
                         desc: "Post-acquisizione di Tecnema da parte di Breton: necessità di integrare prodotti nel CRM aziendale e allineare processi aziendali mantenendo l'efficacia commerciale nel mercato ceramico."
@@ -100,6 +105,7 @@ const translations = {
                     title: "Chief Operations Officer",
                     company: "Tecnema Breton Group",
                     date: "2018 - 2019",
+                    preview: "Piano Industriale, team da 30 a 36, espansione in Vietnam, Brasile, India. Base per l'acquisizione successiva.",
                     challenge: {
                         title: "Sfida",
                         desc: "Tecnema, PMI specializzata nel fine linea ceramico, doveva scalare rapidamente per competere globalmente. Serviva un partner industriale ma senza perdere identità e agilità."
@@ -117,6 +123,7 @@ const translations = {
                     title: "International Sales Director",
                     company: "Tecnema Technology",
                     date: "2015 - 2018",
+                    preview: "Rete di 15 partner in 15 paesi, crescita export strutturata, sviluppo prodotti innovativi per il mercato globale.",
                     challenge: {
                         title: "Sfida",
                         desc: "Il 70% del fatturato dipendeva dall'export ma senza una strategia strutturata. Mercati frammentati, partner non coordinati, necessità di incrementare il potenziale sui mercati USA ed Europa."
@@ -134,6 +141,7 @@ const translations = {
                     title: "Area Sales Manager",
                     company: "Tecnema Technology",
                     date: "2013 - 2015",
+                    preview: "Da ingegnere a commerciale: 7 paesi, 4 clienti chiave ancora reference, apertura mercato laterizi.",
                     challenge: {
                         title: "Sfida",
                         desc: "Da ingegnere a commerciale: 7 paesi da gestire, culture diverse, prodotti complessi da spiegare. Il classico salto nel vuoto che o ti forma o ti distrugge."
@@ -149,7 +157,7 @@ const translations = {
                 }
             }
         },
-        
+
         // Help Section
         help: {
             title: "Come Posso Aiutarti",
@@ -321,10 +329,14 @@ const translations = {
         experience: {
             title: "My Journey",
             tagline: "Every role a challenge. Every challenge a growth opportunity.",
+            expandLabel: "Learn more",
+            closeLabel: "Close",
             roles: {
                 current: {
                     title: "Independent Strategic Consultant",
                     date: "2021 - Present",
+                    badge: "Current",
+                    preview: "Agile consulting for the ceramic sector: technical assessments, process optimization, change management support.",
                     challenge: {
                         title: "Challenge",
                         desc: "Historic clients in the ceramic sector needed continuity of support during critical technology transitions, without the burden of a corporate structure."
@@ -342,6 +354,7 @@ const translations = {
                     title: "Business Development Manager",
                     company: "Breton S.p.A.",
                     date: "2020 - 2021",
+                    preview: "Post-M&A integration: CRM, training 12 Area Managers, procedures for operational continuity.",
                     challenge: {
                         title: "Challenge",
                         desc: "Post-acquisition of Tecnema by Breton: need to integrate products into the company CRM and align business processes while maintaining commercial effectiveness in the ceramic market."
@@ -360,6 +373,7 @@ const translations = {
                     title: "Chief Operations Officer",
                     company: "Tecnema Breton Group",
                     date: "2018 - 2019",
+                    preview: "Industrial Plan, team from 30 to 36, expansion to Vietnam, Brazil, India. Foundation for subsequent acquisition.",
                     challenge: {
                         title: "Challenge",
                         desc: "Tecnema, an SME specialized in ceramic end-of-line, needed to scale rapidly to compete globally. An industrial partner was needed but without losing identity and agility."
@@ -377,6 +391,7 @@ const translations = {
                     title: "International Sales Director",
                     company: "Tecnema Technology",
                     date: "2015 - 2018",
+                    preview: "Network of 15 partners in 15 countries, structured export growth, innovative product development for the global market.",
                     challenge: {
                         title: "Challenge",
                         desc: "70% of revenue depended on exports but without a structured strategy. Fragmented markets, uncoordinated partners, need to increase potential in USA and Europe markets."
@@ -394,6 +409,7 @@ const translations = {
                     title: "Area Sales Manager",
                     company: "Tecnema Technology",
                     date: "2013 - 2015",
+                    preview: "From engineer to salesman: 7 countries, 4 key clients still as references, opened the brick market.",
                     challenge: {
                         title: "Challenge",
                         desc: "From engineer to salesman: 7 countries to manage, different cultures, complex products to explain. The classic leap into the void that either shapes you or destroys you."
