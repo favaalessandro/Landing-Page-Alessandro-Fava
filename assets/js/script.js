@@ -388,8 +388,8 @@ class NetflixCarousel {
         this.arrowLeft = this.carousel.querySelector('.netflix-carousel__arrow--left');
         this.arrowRight = this.carousel.querySelector('.netflix-carousel__arrow--right');
         this.dots = Array.from(this.carousel.querySelectorAll('.netflix-carousel__dot'));
-        this.years = Array.from(this.carousel.querySelectorAll('.netflix-timeline__year'));
-        this.progressBar = this.carousel.querySelector('.netflix-timeline__progress');
+        this.years = Array.from(document.querySelectorAll('.netflix-timeline__year'));
+        this.progressBar = document.querySelector('.netflix-timeline__progress');
 
         this.currentIndex = 0;
         this.totalCards = this.cards.length;
@@ -529,7 +529,10 @@ class NetflixCarousel {
         if (expandBtn) {
             const nowExpanded = card.classList.contains('netflix-card--expanded');
             expandBtn.setAttribute('aria-expanded', nowExpanded.toString());
-            expandBtn.textContent = nowExpanded ? 'Chiudi' : 'Scopri di più';
+            const expandText = expandBtn.querySelector('.netflix-card__expand-text');
+            if (expandText) {
+                expandText.textContent = nowExpanded ? 'Chiudi' : 'Scopri di più';
+            }
         }
 
         if (details) {
@@ -545,7 +548,10 @@ class NetflixCarousel {
             const expandBtn = card.querySelector('.netflix-card__expand');
             if (expandBtn) {
                 expandBtn.setAttribute('aria-expanded', 'false');
-                expandBtn.textContent = 'Scopri di più';
+                const expandText = expandBtn.querySelector('.netflix-card__expand-text');
+                if (expandText) {
+                    expandText.textContent = 'Scopri di più';
+                }
             }
 
             const details = card.querySelector('.netflix-card__details');
