@@ -18,12 +18,18 @@ const translations = {
         
         // Hero Section
         hero: {
-            subtitle: "Senior Consultant - Business & Technical Advisory",
+            tagline: "Business & Technical Advisory",
+            subtitle: "Trasformo complessità industriali in vantaggi competitivi",
             description: "Consulente indipendente con oltre dieci anni di esperienza nella gestione di progetti complessi, sviluppo commerciale e trasformazioni organizzative nel settore industriale. Specializzato in tecnologie ceramiche, integrazione post-M&A e ottimizzazione processi manifatturieri.",
             contactBtn: "Contattami",
-            downloadCV: "Scarica CV"
+            downloadCV: "Scarica CV",
+            trust: {
+                years: { number: "10+", label: "Anni di esperienza" },
+                countries: { number: "15+", label: "Paesi" },
+                projects: { number: "50+", label: "Progetti" }
+            }
         },
-        
+
         // About Section
         about: {
             title: "Il Mio Valore",
@@ -46,9 +52,11 @@ const translations = {
                 years: "Anni esperienza",
                 countries: "Paesi serviti",
                 projects: "Progetti completati"
-            }
+            },
+            quote: "Il vero valore della consulenza non sta nel dare risposte, ma nel fare le domande giuste. Ogni azienda ha già le soluzioni dentro di sé — il mio compito è aiutarla a trovarle.",
+            quoteAuthor: "— Alessandro Fava"
         },
-        
+
         // Experience Section
         experience: {
             title: "Il Mio Percorso",
@@ -214,13 +222,14 @@ const translations = {
         // Contact Section
         contact: {
             title: "Restiamo in Contatto",
+            tagline: "Pronto a trasformare le tue sfide in opportunità?",
             description: "Basato a Modena, Emilia-Romagna. Sono sempre interessato a nuove opportunità e collaborazioni nel Business Development e Sales Engineering. Non esitare a contattarmi per progetti, consulenze o networking professionale.",
             email: "Email",
             linkedIn: "LinkedIn",
             gitHub: "GitHub",
-            copyright: "© 2025 Alessandro Fava. Tutti i diritti riservati."
+            copyright: "© 2026 Alessandro Fava. Tutti i diritti riservati."
         },
-        
+
         // Side Panel
         panel: {
             title: "Business Development Manager",
@@ -269,12 +278,18 @@ const translations = {
         
         // Hero Section
         hero: {
-            subtitle: "Senior Consultant - Business & Technical Advisory",
+            tagline: "Business & Technical Advisory",
+            subtitle: "Turning industrial complexity into competitive advantage",
             description: "Independent consultant with over ten years of experience in complex project management, business development and organizational transformations in the industrial sector. Specialized in ceramic technologies, post-M&A integration and manufacturing process optimization.",
             contactBtn: "Contact Me",
-            downloadCV: "Download CV"
+            downloadCV: "Download CV",
+            trust: {
+                years: { number: "10+", label: "Years of experience" },
+                countries: { number: "15+", label: "Countries" },
+                projects: { number: "50+", label: "Projects" }
+            }
         },
-        
+
         // About Section
         about: {
             title: "My Value",
@@ -297,9 +312,11 @@ const translations = {
                 years: "Years of experience",
                 countries: "Countries served",
                 projects: "Projects completed"
-            }
+            },
+            quote: "The true value of consulting is not in providing answers, but in asking the right questions. Every company already has the solutions within — my job is to help them find them.",
+            quoteAuthor: "— Alessandro Fava"
         },
-        
+
         // Experience Section
         experience: {
             title: "My Journey",
@@ -465,13 +482,14 @@ const translations = {
         // Contact Section
         contact: {
             title: "Let's Stay in Touch",
+            tagline: "Ready to turn your challenges into opportunities?",
             description: "Based in Modena, Emilia-Romagna. I am always interested in new opportunities and collaborations in Business Development and Sales Engineering. Feel free to contact me for projects, consulting or professional networking.",
             email: "Email",
             linkedIn: "LinkedIn",
             gitHub: "GitHub",
-            copyright: "© 2025 Alessandro Fava. All rights reserved."
+            copyright: "© 2026 Alessandro Fava. All rights reserved."
         },
-        
+
         // Side Panel
         panel: {
             title: "Business Development Manager",
