@@ -175,17 +175,17 @@ const initializeTimeline = () => {
 };
 
 // ========================================
-// SIDE PANEL FUNCTIONALITY
+// CASE STUDY MODAL FUNCTIONALITY
 // ========================================
 
-const openSidePanel = (panelId) => {
-    const panel = document.getElementById(panelId);
+const openModal = (panelId) => {
+    const modal = document.getElementById(panelId);
     const overlay = document.getElementById('panel-overlay');
 
-    if (panel && overlay) {
-        panel.classList.add('active');
+    if (modal && overlay) {
+        modal.classList.add('active');
         overlay.classList.add('active');
-        panel.setAttribute('aria-hidden', 'false');
+        modal.setAttribute('aria-hidden', 'false');
 
         // Make page content inert
         const main = document.querySelector('main');
@@ -194,17 +194,17 @@ const openSidePanel = (panelId) => {
         if (nav) nav.setAttribute('inert', '');
 
         // Focus management
-        const closeButton = panel.querySelector('.panel-close');
+        const closeButton = modal.querySelector('.case-modal__close');
         if (closeButton) closeButton.focus();
 
         // Focus trap
-        const focusableElements = panel.querySelectorAll(
+        const focusableElements = modal.querySelectorAll(
             'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
         );
         const firstFocusable = focusableElements[0];
         const lastFocusable = focusableElements[focusableElements.length - 1];
 
-        panel._trapFocus = (e) => {
+        modal._trapFocus = (e) => {
             if (e.key === 'Tab') {
                 if (e.shiftKey) {
                     if (document.activeElement === firstFocusable) {
@@ -219,24 +219,24 @@ const openSidePanel = (panelId) => {
                 }
             }
         };
-        panel.addEventListener('keydown', panel._trapFocus);
+        modal.addEventListener('keydown', modal._trapFocus);
 
         // Add escape key listener
-        document.addEventListener('keydown', handlePanelEscapeKey);
+        document.addEventListener('keydown', handleModalEscapeKey);
 
         // Prevent body scroll
         document.body.style.overflow = 'hidden';
     }
 };
 
-const closeSidePanel = (panelId) => {
-    const panel = document.getElementById(panelId);
+const closeModal = (panelId) => {
+    const modal = document.getElementById(panelId);
     const overlay = document.getElementById('panel-overlay');
 
-    if (panel && overlay) {
-        panel.classList.remove('active');
+    if (modal && overlay) {
+        modal.classList.remove('active');
         overlay.classList.remove('active');
-        panel.setAttribute('aria-hidden', 'true');
+        modal.setAttribute('aria-hidden', 'true');
 
         // Restore page content
         const main = document.querySelector('main');
@@ -245,12 +245,12 @@ const closeSidePanel = (panelId) => {
         if (nav) nav.removeAttribute('inert');
 
         // Remove focus trap
-        if (panel._trapFocus) {
-            panel.removeEventListener('keydown', panel._trapFocus);
+        if (modal._trapFocus) {
+            modal.removeEventListener('keydown', modal._trapFocus);
         }
 
         // Remove escape key listener
-        document.removeEventListener('keydown', handlePanelEscapeKey);
+        document.removeEventListener('keydown', handleModalEscapeKey);
 
         // Restore body scroll
         document.body.style.overflow = '';
@@ -261,41 +261,41 @@ const closeSidePanel = (panelId) => {
     }
 };
 
-const handlePanelEscapeKey = (e) => {
+const handleModalEscapeKey = (e) => {
     if (e.key === 'Escape') {
-        const activePanel = document.querySelector('.side-panel.active');
-        if (activePanel) {
-            closeSidePanel(activePanel.id);
+        const activeModal = document.querySelector('.case-modal.active');
+        if (activeModal) {
+            closeModal(activeModal.id);
         }
     }
 };
 
-// Event delegation for panel triggers and closers
+// Event delegation for modal triggers and closers
 document.addEventListener('click', (e) => {
     const trigger = e.target.closest('[data-panel-trigger]');
     if (trigger) {
-        openSidePanel(trigger.dataset.panelTrigger);
+        openModal(trigger.dataset.panelTrigger);
         return;
     }
 
     const closer = e.target.closest('[data-panel-close]');
     if (closer) {
-        closeSidePanel(closer.dataset.panelClose);
+        closeModal(closer.dataset.panelClose);
         return;
     }
 
-    // Close panel when clicking overlay
+    // Close modal when clicking overlay
     if (e.target.id === 'panel-overlay' && e.target.classList.contains('active')) {
-        const activePanel = document.querySelector('.side-panel.active');
-        if (activePanel) {
-            closeSidePanel(activePanel.id);
+        const activeModal = document.querySelector('.case-modal.active');
+        if (activeModal) {
+            closeModal(activeModal.id);
         }
     }
 });
 
 // Make functions globally available
-window.openSidePanel = openSidePanel;
-window.closeSidePanel = closeSidePanel;
+window.openModal = openModal;
+window.closeModal = closeModal;
 
 // ========================================
 // LAZY LOADING IMAGES

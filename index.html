@@ -278,10 +278,16 @@
                             <div class="netflix-card__preview">
                                 <p>Integrazione post-M&amp;A: CRM, formazione 12 Area Manager, procedure per continuità operativa.</p>
                             </div>
-                            <button class="netflix-card__expand" aria-expanded="false" aria-label="Espandi dettagli">
-                                <span class="netflix-card__expand-text">Scopri di più</span>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                            </button>
+                            <div class="netflix-card__actions">
+                                <button class="netflix-card__expand" aria-expanded="false" aria-label="Espandi dettagli">
+                                    <span class="netflix-card__expand-text">Scopri di più</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                                <button class="netflix-card__deepdive" data-panel-trigger="bdm-panel" aria-haspopup="dialog">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                                    <span>Case Study</span>
+                                </button>
+                            </div>
                             <div class="netflix-card__details" aria-hidden="true">
                                 <div class="netflix-card__detail-section netflix-card__detail--challenge">
                                     <h5>Sfida</h5>
@@ -295,9 +301,6 @@
                                     <h5>Risultato</h5>
                                     <p>Formazione completata per 12 Area Manager Breton su prodotti complessi. Implementazione di procedure post-M&amp;A che hanno garantito continuità operativa. L'integrazione è diventata un modello di riferimento interno.</p>
                                 </div>
-                                <button class="netflix-card__deepdive" data-panel-trigger="bdm-panel" aria-haspopup="dialog">
-                                    Approfondisci questa esperienza →
-                                </button>
                             </div>
                         </div>
 
@@ -627,59 +630,69 @@
         </div>
     </footer>
 
-    <!-- Panel Overlay -->
-    <div id="panel-overlay" class="panel-overlay" aria-hidden="true"></div>
+    <!-- Modal Overlay -->
+    <div id="panel-overlay" class="modal-overlay" aria-hidden="true"></div>
 
-    <!-- Side Panel for Business Development Manager Details -->
-    <div id="bdm-panel" class="side-panel" role="dialog" aria-labelledby="panel-title" aria-modal="true" aria-hidden="true">
-        <div class="panel-content">
-            <div class="panel-header">
-                <h3 id="panel-title">Business Development Manager</h3>
-                <button class="panel-close" data-panel-close="bdm-panel" aria-label="Chiudi pannello">
-                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <!-- Case Study Modal: Business Development Manager -->
+    <div id="bdm-panel" class="case-modal" role="dialog" aria-labelledby="modal-title" aria-modal="true" aria-hidden="true">
+        <div class="case-modal__inner">
+            <!-- Header -->
+            <div class="case-modal__header">
+                <div>
+                    <span class="case-modal__badge">Case Study</span>
+                    <h3 id="modal-title" class="case-modal__title">Business Development Post-Acquisizione</h3>
+                    <p class="case-modal__subtitle">Breton S.p.A. &mdash; Uno Studio sull'Integrazione Aziendale</p>
+                </div>
+                <button class="case-modal__close" data-panel-close="bdm-panel" aria-label="Chiudi">
+                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 </button>
             </div>
-            <div class="panel-body">
-                <h4>Business Development Post-Acquisizione in Breton</h4>
-                <p class="panel-subtitle">Uno Studio sull'Integrazione Aziendale</p>
-                <p>
-                    Dopo l'operazione di M&A, ho assunto la responsabilità della linea di prodotti Tecnema all'interno di Breton.
-                    Il mandato era chiaro: espandere la redditività della divisione ceramica sfruttando i canali di distribuzione
-                    esistenti e costruendone di nuovi.
-                </p>
 
-                <h5>Funzioni Chiave Eseguite:</h5>
-                <ul class="panel-list">
-                    <li>Ottimizzazione dei processi di gestione ordini e supporto tecnico tra i dipartimenti</li>
-                    <li>Sviluppo di programmi di formazione basati sulle competenze per l'organizzazione vendite</li>
-                    <li>Implementazione di disciplina sui prezzi e sviluppo prodotti basato sui gap di mercato</li>
-                    <li>Gestione diretta del P&L per i mercati USA, Europa, UK e Turchia</li>
-                    <li>Costruzione di processi sistematici di qualificazione prospect basati sull'economia del cliente</li>
-                </ul>
+            <!-- Body -->
+            <div class="case-modal__body">
+                <!-- Context -->
+                <div class="case-modal__section">
+                    <p>Dopo l'operazione di M&amp;A, ho assunto la responsabilità della linea di prodotti Tecnema all'interno di Breton. Il mandato era chiaro: espandere la redditività della divisione ceramica sfruttando i canali di distribuzione esistenti e costruendone di nuovi.</p>
+                </div>
 
-                <h5>Lezioni Critiche dal Campo:</h5>
-                <p>
-                    La vera formazione è arrivata navigando la complessità di una multinazionale durante l'integrazione post-fusione.
-                    Sono emerse due sfide fondamentali: il consolidamento degli asset e l'allineamento del capitale umano.
-                </p>
-                <p>
-                    La soluzione non era complicata, solo difficile da eseguire: pianificazione metodica, comunicazione trasparente
-                    e coinvolgimento genuino degli stakeholder.
-                </p>
-                <p>
-                    L'esperienza ha rafforzato un principio senza tempo: <strong>nelle M&A, la cultura si mangia la strategia a colazione</strong>.
-                    L'integrazione tecnica è aritmetica semplice; l'integrazione umana è calcolo avanzato.
-                </p>
+                <!-- Key Functions Grid -->
+                <div class="case-modal__section">
+                    <h4 class="case-modal__section-title">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        Funzioni Chiave
+                    </h4>
+                    <ul class="case-modal__list">
+                        <li>Ottimizzazione dei processi di gestione ordini e supporto tecnico tra i dipartimenti</li>
+                        <li>Sviluppo di programmi di formazione basati sulle competenze per l'organizzazione vendite</li>
+                        <li>Implementazione di disciplina sui prezzi e sviluppo prodotti basato sui gap di mercato</li>
+                        <li>Gestione diretta del P&amp;L per i mercati USA, Europa, UK e Turchia</li>
+                        <li>Costruzione di processi sistematici di qualificazione prospect basati sull'economia del cliente</li>
+                    </ul>
+                </div>
 
-                <div class="panel-highlight">
-                    <h5>Risultato Finale:</h5>
-                    <p>
-                        Ho generato una crescita misurabile dei ricavi costruendo al contempo conoscenza istituzionale che si accumula nel tempo.
-                        Questo è l'unico tipo di successo che conta davvero.
-                    </p>
+                <!-- Lessons -->
+                <div class="case-modal__section">
+                    <h4 class="case-modal__section-title">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        Lezioni dal Campo
+                    </h4>
+                    <p>La vera formazione è arrivata navigando la complessità di una multinazionale durante l'integrazione post-fusione. Sono emerse due sfide fondamentali: il consolidamento degli asset e l'allineamento del capitale umano.</p>
+                    <p>La soluzione non era complicata, solo difficile da eseguire: pianificazione metodica, comunicazione trasparente e coinvolgimento genuino degli stakeholder.</p>
+                    <blockquote class="case-modal__quote">
+                        Nelle M&amp;A, la cultura si mangia la strategia a colazione. L'integrazione tecnica è aritmetica semplice; l'integrazione umana è calcolo avanzato.
+                    </blockquote>
+                </div>
+
+                <!-- Result Highlight -->
+                <div class="case-modal__result">
+                    <h4 class="case-modal__section-title">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        Risultato Finale
+                    </h4>
+                    <p>Ho generato una crescita misurabile dei ricavi costruendo al contempo conoscenza istituzionale che si accumula nel tempo. Questo è l'unico tipo di successo che conta davvero.</p>
                 </div>
             </div>
         </div>
