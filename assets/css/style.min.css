@@ -1768,7 +1768,7 @@ a:hover {
 /* Ensure section--dark background override for alternating section colors */
 .section--dark.section:nth-child(even),
 .section--dark.section:nth-child(odd) {
-    background-color: var(--color-neutral-900);
+    background-color: #141414;
 }
 
 /* --- Netflix Carousel Animations --- */
