@@ -1312,270 +1312,541 @@ a:hover {
 }
 
 /* ========================================
-   TIMELINE COMPONENTS - Enhanced
+   NETFLIX CAROUSEL - Experience Section
 ======================================== */
 
-/* Timeline Container */
-.timeline {
+/* --- Netflix Timeline Bar (top horizontal line with years) --- */
+.netflix-timeline {
     position: relative;
-    max-width: 850px;
-    margin: 0 auto;
-    padding: var(--space-12) 0;
+    margin-bottom: var(--space-10);
+    padding: 0 var(--space-8);
 }
 
-/* Timeline Line - Thicker gradient */
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: linear-gradient(180deg, var(--color-primary), var(--color-primary-light), var(--color-secondary));
-    transform: translateX(-50%);
+.netflix-timeline__bar {
+    position: relative;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius-full);
-}
-
-@media (max-width: 768px) {
-    .timeline::before {
-        left: var(--space-6);
-    }
-}
-
-/* Timeline Items - More spacing */
-.timeline-item {
-    position: relative;
-    margin-bottom: var(--space-16);
-    opacity: 1;
-    transform: translateY(0);
-    transition: all var(--transition-normal);
-}
-
-.timeline-item:last-child {
-    margin-bottom: 0;
-}
-
-.timeline-item.fade-in-up {
-    opacity: 0;
-    transform: translateY(var(--space-8));
-}
-
-.timeline-item.visible,
-.timeline-item.revealed {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.timeline-item:nth-child(odd) .timeline-content {
-    margin-left: calc(50% + var(--space-10));
-    text-align: left;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-    margin-right: calc(50% + var(--space-10));
-    text-align: right;
-}
-
-@media (max-width: 768px) {
-    .timeline-item:nth-child(odd) .timeline-content,
-    .timeline-item:nth-child(even) .timeline-content {
-        margin-left: calc(var(--space-6) + var(--space-10));
-        margin-right: 0;
-        text-align: left;
-    }
-}
-
-/* Timeline Markers - Larger with glow */
-.timeline-marker {
-    position: absolute;
-    left: 50%;
-    top: var(--space-6);
-    width: 20px;
-    height: 20px;
-    background-color: var(--color-neutral-300);
-    border: 3px solid #ffffff;
-    border-radius: var(--border-radius-full);
-    transform: translateX(-50%);
-    transition: all var(--transition-normal);
-    z-index: 2;
-    box-shadow: 0 0 0 4px rgba(203, 213, 225, 0.3);
-}
-
-.timeline-marker.active {
-    background-color: var(--color-primary);
-    border-color: #ffffff;
-    box-shadow: 0 0 0 6px rgba(30, 58, 138, 0.2), 0 0 20px rgba(59, 130, 246, 0.3);
-    animation: pulse 2s infinite;
-}
-
-@media (max-width: 768px) {
-    .timeline-marker {
-        left: var(--space-6);
-    }
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(30, 58, 138, 0.4), 0 0 20px rgba(59, 130, 246, 0.3);
-    }
-    70% {
-        box-shadow: 0 0 0 12px rgba(30, 58, 138, 0), 0 0 20px rgba(59, 130, 246, 0.1);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(30, 58, 138, 0), 0 0 20px rgba(59, 130, 246, 0.3);
-    }
-}
-
-/* Timeline Content - With colored accent bar */
-.timeline-content {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: var(--space-8);
-    border-radius: var(--border-radius-2xl);
-    box-shadow: var(--shadow-md);
-    border: var(--border-width) solid rgba(226, 232, 240, 0.6);
-    transition: all var(--transition-normal);
-    position: relative;
     overflow: hidden;
 }
 
-/* Left colored accent bar */
-.timeline-content::before {
-    content: '';
+.netflix-timeline__progress {
     position: absolute;
-    left: 0;
     top: 0;
-    bottom: 0;
-    width: 4px;
-    background: linear-gradient(180deg, var(--color-primary), var(--color-primary-light));
-    border-radius: var(--border-radius-full) 0 0 var(--border-radius-full);
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary-light), var(--color-secondary-light));
+    border-radius: var(--border-radius-full);
+    transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    width: 0%;
 }
 
-/* Even items show bar on the right instead */
-.timeline-item:nth-child(even) .timeline-content::before {
-    left: auto;
-    right: 0;
-    border-radius: 0 var(--border-radius-full) var(--border-radius-full) 0;
+.netflix-timeline__years {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-3);
+    position: relative;
 }
 
-@media (max-width: 768px) {
-    .timeline-item:nth-child(even) .timeline-content::before {
-        left: 0;
-        right: auto;
-        border-radius: var(--border-radius-full) 0 0 var(--border-radius-full);
+.netflix-timeline__year {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-normal);
+    background: none;
+    border: none;
+    font-family: var(--font-family-primary);
+    letter-spacing: 0.05em;
+}
+
+.netflix-timeline__year:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.netflix-timeline__year--active {
+    color: #ffffff;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    background: rgba(59, 130, 246, 0.15);
+}
+
+/* --- Netflix Carousel Wrapper --- */
+.netflix-carousel {
+    position: relative;
+    padding: 0 var(--space-8);
+}
+
+/* --- Arrow Buttons --- */
+.netflix-carousel__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--border-radius-full);
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-normal);
+    font-size: var(--font-size-xl);
+    line-height: 1;
+    padding: 0;
+}
+
+.netflix-carousel__arrow:hover {
+    background: rgba(59, 130, 246, 0.5);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.netflix-carousel__arrow:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.netflix-carousel__arrow--left {
+    left: -8px;
+}
+
+.netflix-carousel__arrow--right {
+    right: -8px;
+}
+
+/* Hide arrows on mobile (swipe instead) */
+@media (max-width: 639px) {
+    .netflix-carousel__arrow {
+        display: none;
     }
 }
 
-.timeline-content:hover {
-    box-shadow: var(--shadow-lg), var(--shadow-glow);
-    transform: translateY(-3px);
+/* --- Carousel Track --- */
+.netflix-carousel__track {
+    display: flex;
+    gap: 24px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: var(--space-6) 0;
+    -webkit-overflow-scrolling: touch;
 }
 
-.timeline-content h3 {
-    color: var(--color-primary);
-    font-size: var(--font-size-xl);
+/* Allow swipe scrolling on mobile */
+@media (max-width: 639px) {
+    .netflix-carousel__track {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .netflix-carousel__track::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* --- Netflix Card --- */
+.netflix-card {
+    min-width: 340px;
+    max-width: 400px;
+    flex-shrink: 0;
+    background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 16px;
+    padding: var(--space-6);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Subtle inner glow on top edge */
+.netflix-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+    pointer-events: none;
+}
+
+/* Hover effect */
+.netflix-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15),
+                0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Active card - bigger and brighter */
+.netflix-card--active {
+    transform: scale(1.05);
+    border-color: rgba(59, 130, 246, 0.35);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3),
+                0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.netflix-card--active:hover {
+    transform: scale(1.05) translateY(-4px);
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.35),
+                0 16px 48px rgba(0, 0, 0, 0.45);
+}
+
+/* Snap on mobile */
+@media (max-width: 639px) {
+    .netflix-card {
+        min-width: 85vw;
+        max-width: 85vw;
+        scroll-snap-align: center;
+    }
+
+    .netflix-card--active {
+        transform: none;
+    }
+
+    .netflix-card--active:hover {
+        transform: translateY(-4px);
+    }
+}
+
+/* Tablet: show ~2 cards */
+@media (min-width: 640px) and (max-width: 1023px) {
+    .netflix-card {
+        min-width: 280px;
+        max-width: 340px;
+    }
+}
+
+/* --- Badge ("Attuale") --- */
+.netflix-card__badge {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-light) 100%);
+    color: #ffffff;
+    font-size: var(--font-size-xs);
     font-weight: var(--font-weight-bold);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--border-radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    box-shadow: 0 2px 8px rgba(5, 150, 105, 0.4);
+    z-index: 2;
+    line-height: var(--line-height-tight);
+}
+
+/* --- Card Header --- */
+.netflix-card__header {
+    margin-bottom: var(--space-4);
+    padding-right: var(--space-12);
+}
+
+.netflix-card__date {
+    display: block;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary-light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     margin-bottom: var(--space-2);
 }
 
-.timeline-content h4 {
-    color: var(--color-secondary);
+.netflix-card__title {
+    font-family: var(--font-family-display);
     font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-semibold);
-    margin-bottom: var(--space-1);
-}
-
-.timeline-date {
-    color: var(--color-neutral-500);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-semibold);
-    margin-bottom: var(--space-4);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-}
-
-/* CAR Story Structure */
-.car-story {
-    margin-top: var(--space-6);
-}
-
-.car-section {
-    margin-bottom: var(--space-4);
-    padding: var(--space-4) var(--space-5);
-    border-radius: var(--border-radius-xl);
-    border-left: 4px solid;
-    transition: all var(--transition-fast);
-}
-
-.car-section:hover {
-    transform: translateX(2px);
-}
-
-.car-section.challenge {
-    background-color: rgba(239, 68, 68, 0.04);
-    border-left-color: #EF4444;
-}
-
-.car-section.action {
-    background-color: rgba(245, 158, 11, 0.04);
-    border-left-color: var(--color-accent);
-}
-
-.car-section.result {
-    background-color: rgba(5, 150, 105, 0.04);
-    border-left-color: var(--color-secondary);
-}
-
-.car-section h5 {
-    font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: var(--space-2);
-    color: inherit;
+    color: #ffffff;
+    margin-bottom: var(--space-1);
+    line-height: var(--line-height-snug);
 }
 
-.car-section.challenge h5 {
-    color: #B91C1C;
+.netflix-card__company {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-secondary-light);
 }
 
-.car-section.action h5 {
-    color: #92400E;
-}
-
-.car-section.result h5 {
-    color: var(--color-secondary);
-}
-
-.car-section p {
-    color: var(--color-neutral-700);
+/* --- Card Preview (short description) --- */
+.netflix-card__preview {
+    font-size: var(--font-size-sm);
+    color: var(--color-neutral-400);
     line-height: var(--line-height-relaxed);
+    margin-bottom: var(--space-4);
 }
 
-/* Story Detail Button */
-.story-detail {
+/* --- Expand Button --- */
+.netflix-card__expand {
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
-    margin-top: var(--space-4);
-    padding: var(--space-2) var(--space-5);
-    background: transparent;
-    border: var(--border-width-2) solid var(--color-primary);
-    border-radius: var(--border-radius-xl);
-    color: var(--color-primary);
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: var(--border-radius-lg);
+    color: var(--color-primary-light);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-semibold);
+    padding: var(--space-2) var(--space-4);
     cursor: pointer;
     transition: all var(--transition-normal);
-    text-decoration: none;
+    font-family: var(--font-family-primary);
 }
 
-.story-detail:hover {
-    background-color: var(--color-primary);
-    color: white;
-    transform: translateX(4px);
-    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.25);
+.netflix-card__expand:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.4);
+    color: #ffffff;
+}
+
+.netflix-card__expand-text {
+    transition: none;
+}
+
+/* Chevron icon inside expand button */
+.netflix-card__expand svg,
+.netflix-card__expand .chevron-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate chevron when expanded */
+.netflix-card--expanded .netflix-card__expand svg,
+.netflix-card--expanded .netflix-card__expand .chevron-icon {
+    transform: rotate(180deg);
+}
+
+/* --- Expandable Details Section --- */
+.netflix-card__details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.4s ease,
+                padding-top 0.4s ease;
+    padding-top: 0;
+}
+
+.netflix-card--expanded .netflix-card__details {
+    max-height: 600px;
+    opacity: 1;
+    padding-top: 20px;
+}
+
+/* --- Detail Sections (Challenge / Action / Result) --- */
+.netflix-card__detail-section {
+    padding: var(--space-4) var(--space-5);
+    margin-bottom: var(--space-3);
+    border-radius: var(--border-radius-lg);
+    border-left: 3px solid;
+    transition: all var(--transition-fast);
+}
+
+.netflix-card__detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.netflix-card__detail-section:hover {
+    transform: translateX(2px);
+}
+
+/* Challenge - Amber/Orange */
+.netflix-card__detail--challenge {
+    border-left-color: #F59E0B;
+    background: rgba(245, 158, 11, 0.06);
+}
+
+.netflix-card__detail--challenge h5 {
+    color: #FBBF24;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-2);
+}
+
+/* Action - Blue */
+.netflix-card__detail--action {
+    border-left-color: #3B82F6;
+    background: rgba(59, 130, 246, 0.06);
+}
+
+.netflix-card__detail--action h5 {
+    color: #60A5FA;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-2);
+}
+
+/* Result - Green */
+.netflix-card__detail--result {
+    border-left-color: #10B981;
+    background: rgba(16, 185, 129, 0.06);
+}
+
+.netflix-card__detail--result h5 {
+    color: #34D399;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-2);
+}
+
+.netflix-card__detail-section p {
+    color: var(--color-neutral-400);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+}
+
+/* --- Pagination Dots --- */
+.netflix-carousel__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: var(--space-8);
+    padding: var(--space-2) 0;
+}
+
+.netflix-carousel__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: var(--border-radius-full);
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.netflix-carousel__dot:hover {
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(1.2);
+}
+
+.netflix-carousel__dot--active {
+    background: #ffffff;
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* --- Section Dark overrides for Experience Netflix section --- */
+.section--dark .netflix-timeline,
+.section--dark .netflix-carousel {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure section--dark background override for alternating section colors */
+.section--dark.section:nth-child(even),
+.section--dark.section:nth-child(odd) {
+    background-color: var(--color-neutral-900);
+}
+
+/* --- Netflix Carousel Animations --- */
+@keyframes netflixSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes netflixProgressFill {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--progress-width, 50%);
+    }
+}
+
+.netflix-card.animate-in {
+    animation: netflixSlideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.netflix-card.animate-in:nth-child(1) { animation-delay: 0ms; }
+.netflix-card.animate-in:nth-child(2) { animation-delay: 100ms; }
+.netflix-card.animate-in:nth-child(3) { animation-delay: 200ms; }
+.netflix-card.animate-in:nth-child(4) { animation-delay: 300ms; }
+.netflix-card.animate-in:nth-child(5) { animation-delay: 400ms; }
+
+/* --- Responsive: Desktop (1024+) show ~3 cards, center active --- */
+@media (min-width: 1024px) {
+    .netflix-carousel {
+        padding: 0 var(--space-16);
+    }
+
+    .netflix-carousel__arrow--left {
+        left: var(--space-2);
+    }
+
+    .netflix-carousel__arrow--right {
+        right: var(--space-2);
+    }
+
+    .netflix-card {
+        min-width: 340px;
+        max-width: 400px;
+    }
+}
+
+/* --- Responsive: Tablet (640-1023) show ~2 cards --- */
+@media (min-width: 640px) and (max-width: 1023px) {
+    .netflix-carousel {
+        padding: 0 var(--space-12);
+    }
+
+    .netflix-carousel__arrow--left {
+        left: var(--space-1);
+    }
+
+    .netflix-carousel__arrow--right {
+        right: var(--space-1);
+    }
+}
+
+/* --- Responsive: Mobile (<640px) full-width swipeable cards --- */
+@media (max-width: 639px) {
+    .netflix-timeline {
+        padding: 0 var(--space-4);
+    }
+
+    .netflix-carousel {
+        padding: 0 var(--space-4);
+    }
+
+    .netflix-timeline__year {
+        font-size: 0.65rem;
+        padding: var(--space-1);
+    }
+
+    .netflix-timeline__year--active {
+        font-size: var(--font-size-xs);
+    }
+
+    .netflix-card__title {
+        font-size: var(--font-size-base);
+    }
+
+    .netflix-carousel__dots {
+        margin-top: var(--space-6);
+    }
 }
 
 /* ========================================
@@ -2017,12 +2288,30 @@ section[id] {
         padding: 0;
     }
 
-    .timeline::before {
+    .netflix-timeline,
+    .netflix-carousel__arrow,
+    .netflix-carousel__dots {
         display: none;
     }
 
-    .timeline-marker {
-        display: none;
+    .netflix-carousel__track {
+        flex-direction: column;
+        gap: 1rem;
+        overflow: visible;
+    }
+
+    .netflix-card {
+        min-width: auto;
+        max-width: none;
+        background: white !important;
+        border: 1px solid #ccc;
+        transform: none !important;
+    }
+
+    .netflix-card__details {
+        max-height: none !important;
+        opacity: 1 !important;
+        overflow: visible !important;
     }
 
     .hero {

@@ -210,166 +210,197 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="section">
+        <section id="experience" class="section section--dark">
             <div class="container">
                 <h2 class="section-title">Il Mio Percorso</h2>
                 <div class="text-center mb-16">
-                    <p class="text-xl text-neutral-600">Ogni ruolo una sfida. Ogni sfida un'opportunità di crescita.</p>
+                    <p class="text-xl" style="color: rgba(148, 163, 184, 0.9);">Ogni ruolo una sfida. Ogni sfida un'opportunità di crescita.</p>
                 </div>
 
-                <div class="timeline">
-                    <!-- Current Role -->
-                    <div class="timeline-item current">
-                        <div class="timeline-marker active"></div>
-                        <div class="timeline-content">
-                            <h3>Consulente Strategico Indipendente</h3>
-                            <p class="timeline-date">2021 - Presente</p>
+                <!-- Horizontal Timeline Bar -->
+                <div class="netflix-timeline">
+                    <div class="netflix-timeline__bar">
+                        <div class="netflix-timeline__progress"></div>
+                    </div>
+                    <div class="netflix-timeline__years">
+                        <span class="netflix-timeline__year" data-index="0">2021</span>
+                        <span class="netflix-timeline__year" data-index="1">2020</span>
+                        <span class="netflix-timeline__year" data-index="2">2018</span>
+                        <span class="netflix-timeline__year" data-index="3">2015</span>
+                        <span class="netflix-timeline__year" data-index="4">2013</span>
+                    </div>
+                </div>
 
-                            <div class="car-story">
-                                <div class="car-section challenge">
+                <!-- Netflix Carousel -->
+                <div class="netflix-carousel">
+                    <button class="netflix-carousel__arrow netflix-carousel__arrow--left" aria-label="Precedente">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+
+                    <div class="netflix-carousel__track">
+                        <!-- Card 1: Current Role -->
+                        <div class="netflix-card netflix-card--active" data-index="0">
+                            <div class="netflix-card__badge">Attuale</div>
+                            <div class="netflix-card__header">
+                                <span class="netflix-card__date">2021 - Presente</span>
+                                <h3 class="netflix-card__title">Consulente Strategico Indipendente</h3>
+                            </div>
+                            <div class="netflix-card__preview">
+                                <p>Consulenza agile per il settore ceramico: valutazioni tecniche, ottimizzazione processi, accompagnamento al cambiamento.</p>
+                            </div>
+                            <button class="netflix-card__expand" aria-expanded="false" aria-label="Espandi dettagli">
+                                <span class="netflix-card__expand-text">Scopri di più</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                            <div class="netflix-card__details" aria-hidden="true">
+                                <div class="netflix-card__detail-section netflix-card__detail--challenge">
                                     <h5>Sfida</h5>
-                                    <p>Clienti storici del settore ceramico necessitavano continuità di supporto
-                                    durante transizioni tecnologiche critiche, senza il peso di una struttura corporate.</p>
+                                    <p>Clienti storici del settore ceramico necessitavano continuità di supporto durante transizioni tecnologiche critiche, senza il peso di una struttura corporate.</p>
                                 </div>
-                                <div class="car-section action">
+                                <div class="netflix-card__detail-section netflix-card__detail--action">
                                     <h5>Azione</h5>
-                                    <p>Ho creato un modello di consulenza agile, focalizzato su interventi mirati:
-                                    valutazioni tecniche pre-investimento, ottimizzazione processi esistenti,
-                                    accompagnamento in fasi di cambiamento organizzativo.</p>
+                                    <p>Ho creato un modello di consulenza agile, focalizzato su interventi mirati: valutazioni tecniche pre-investimento, ottimizzazione processi esistenti, accompagnamento in fasi di cambiamento organizzativo.</p>
                                 </div>
-                                <div class="car-section result">
+                                <div class="netflix-card__detail-section netflix-card__detail--result">
                                     <h5>Risultato</h5>
-                                    <p>Portfolio clienti consolidato nel settore ceramico.
-                                    Supporto strategico per decisioni di investimento in nuove tecnologie.
-                                    Gestione efficace dei ricambi garantendo continuità operativa ai clienti.</p>
+                                    <p>Portfolio clienti consolidato nel settore ceramico. Supporto strategico per decisioni di investimento in nuove tecnologie. Gestione efficace dei ricambi garantendo continuità operativa ai clienti.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Breton -->
+                        <div class="netflix-card" data-index="1">
+                            <div class="netflix-card__header">
+                                <span class="netflix-card__date">2020 - 2021</span>
+                                <h3 class="netflix-card__title">Business Development Manager</h3>
+                                <h4 class="netflix-card__company">Breton S.p.A.</h4>
+                            </div>
+                            <div class="netflix-card__preview">
+                                <p>Integrazione post-M&amp;A: CRM, formazione 12 Area Manager, procedure per continuità operativa.</p>
+                            </div>
+                            <button class="netflix-card__expand" aria-expanded="false" aria-label="Espandi dettagli">
+                                <span class="netflix-card__expand-text">Scopri di più</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                            <div class="netflix-card__details" aria-hidden="true">
+                                <div class="netflix-card__detail-section netflix-card__detail--challenge">
+                                    <h5>Sfida</h5>
+                                    <p>Post-acquisizione di Tecnema da parte di Breton: necessità di integrare prodotti nel CRM aziendale e allineare processi aziendali mantenendo l'efficacia commerciale nel mercato ceramico.</p>
+                                </div>
+                                <div class="netflix-card__detail-section netflix-card__detail--action">
+                                    <h5>Azione</h5>
+                                    <p>Ho gestito l'integrazione dei prodotti Tecnema nel sistema CRM Breton, sviluppato procedure post-M&amp;A per l'allineamento dei processi aziendali e formato il personale commerciale Breton sui prodotti tecnici acquisiti.</p>
+                                </div>
+                                <div class="netflix-card__detail-section netflix-card__detail--result">
+                                    <h5>Risultato</h5>
+                                    <p>Formazione completata per 12 Area Manager Breton su prodotti complessi. Implementazione di procedure post-M&amp;A che hanno garantito continuità operativa. L'integrazione è diventata un modello di riferimento interno.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: COO -->
+                        <div class="netflix-card" data-index="2">
+                            <div class="netflix-card__header">
+                                <span class="netflix-card__date">2018 - 2019</span>
+                                <h3 class="netflix-card__title">Chief Operations Officer</h3>
+                                <h4 class="netflix-card__company">Tecnema Breton Group</h4>
+                            </div>
+                            <div class="netflix-card__preview">
+                                <p>Piano Industriale, team da 30 a 36, espansione in Vietnam, Brasile, India. Base per l'acquisizione successiva.</p>
+                            </div>
+                            <button class="netflix-card__expand" aria-expanded="false" aria-label="Espandi dettagli">
+                                <span class="netflix-card__expand-text">Scopri di più</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                            <div class="netflix-card__details" aria-hidden="true">
+                                <div class="netflix-card__detail-section netflix-card__detail--challenge">
+                                    <h5>Sfida</h5>
+                                    <p>Tecnema, PMI specializzata nel fine linea ceramico, doveva scalare rapidamente per competere globalmente. Serviva un partner industriale ma senza perdere identità e agilità.</p>
+                                </div>
+                                <div class="netflix-card__detail-section netflix-card__detail--action">
+                                    <h5>Azione</h5>
+                                    <p>Come socio operativo, ho implementato direttamente il Piano Industriale: ristrutturazione organizzativa, allineamento processi operativi, espansione rete commerciale in nuovi mercati strategici mantenendo il DNA aziendale.</p>
+                                </div>
+                                <div class="netflix-card__detail-section netflix-card__detail--result">
+                                    <h5>Risultato</h5>
+                                    <p>Implementazione completa del Piano Industriale approvato dal CdA. Team passato da 30 a 36 elementi per sostenere la crescita. Nuovi mercati: Vietnam, Brasile, India. La JV ha posto le basi per l'acquisizione successiva.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: International Sales Director -->
+                        <div class="netflix-card" data-index="3">
+                            <div class="netflix-card__header">
+                                <span class="netflix-card__date">2015 - 2018</span>
+                                <h3 class="netflix-card__title">International Sales Director</h3>
+                                <h4 class="netflix-card__company">Tecnema Technology</h4>
+                            </div>
+                            <div class="netflix-card__preview">
+                                <p>Rete di 15 partner in 15 paesi, crescita export strutturata, sviluppo prodotti innovativi per il mercato globale.</p>
+                            </div>
+                            <button class="netflix-card__expand" aria-expanded="false" aria-label="Espandi dettagli">
+                                <span class="netflix-card__expand-text">Scopri di più</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                            <div class="netflix-card__details" aria-hidden="true">
+                                <div class="netflix-card__detail-section netflix-card__detail--challenge">
+                                    <h5>Sfida</h5>
+                                    <p>Il 70% del fatturato dipendeva dall'export ma senza una strategia strutturata. Mercati frammentati, partner non coordinati, necessità di incrementare il potenziale sui mercati USA ed Europa.</p>
+                                </div>
+                                <div class="netflix-card__detail-section netflix-card__detail--action">
+                                    <h5>Azione</h5>
+                                    <p>Ho ridisegnato la struttura commerciale: selezione partner basata su competenze tecniche, formazione continua, presenza diretta nelle fiere chiave. Sviluppo di nuovi prodotti innovativi per l'immissione sul mercato.</p>
+                                </div>
+                                <div class="netflix-card__detail-section netflix-card__detail--result">
+                                    <h5>Risultato</h5>
+                                    <p>Crescita significativa del business internazionale in 3 anni. Rete di 15 partner qualificati in altrettanti paesi. Sviluppo prodotti innovativi che hanno portato alla joint venture successiva.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Area Sales Manager -->
+                        <div class="netflix-card" data-index="4">
+                            <div class="netflix-card__header">
+                                <span class="netflix-card__date">2013 - 2015</span>
+                                <h3 class="netflix-card__title">Area Sales Manager</h3>
+                                <h4 class="netflix-card__company">Tecnema Technology</h4>
+                            </div>
+                            <div class="netflix-card__preview">
+                                <p>Da ingegnere a commerciale: 7 paesi, 4 clienti chiave ancora reference, apertura mercato laterizi.</p>
+                            </div>
+                            <button class="netflix-card__expand" aria-expanded="false" aria-label="Espandi dettagli">
+                                <span class="netflix-card__expand-text">Scopri di più</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                            <div class="netflix-card__details" aria-hidden="true">
+                                <div class="netflix-card__detail-section netflix-card__detail--challenge">
+                                    <h5>Sfida</h5>
+                                    <p>Da ingegnere a commerciale: 7 paesi da gestire, culture diverse, prodotti complessi da spiegare. Il classico salto nel vuoto che o ti forma o ti distrugge.</p>
+                                </div>
+                                <div class="netflix-card__detail-section netflix-card__detail--action">
+                                    <h5>Azione</h5>
+                                    <p>Ho studiato ogni mercato, passato tempo in produzione per capire davvero i prodotti, ascoltato i clienti più che parlare. Costruito relazioni basate su competenza tecnica, non su pranzi.</p>
+                                </div>
+                                <div class="netflix-card__detail-section netflix-card__detail--result">
+                                    <h5>Risultato</h5>
+                                    <p>Acquisiti 4 clienti chiave che sono ancora reference. Aperto il mercato dei laterizi, completamente nuovo per l'azienda. Imparato che vendere significa prima di tutto capire.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Breton Role -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Business Development Manager</h3>
-                            <h4>Breton S.p.A.</h4>
-                            <p class="timeline-date">2020 - 2021</p>
+                    <button class="netflix-carousel__arrow netflix-carousel__arrow--right" aria-label="Successivo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+                    </button>
+                </div>
 
-                            <div class="car-story">
-                                    <div class="car-section challenge">
-                                        <h5>Sfida</h5>
-                                        <p>Post-acquisizione di Tecnema da parte di Breton: necessità di integrare
-                                        prodotti nel CRM aziendale e allineare processi aziendali mantenendo
-                                        l'efficacia commerciale nel mercato ceramico.</p>
-                                    </div>
-                                    <div class="car-section action">
-                                        <h5>Azione</h5>
-                                        <p>Ho gestito l'integrazione dei prodotti Tecnema nel sistema CRM Breton,
-                                        sviluppato procedure post-M&A per l'allineamento dei processi aziendali
-                                        e formato il personale commerciale Breton sui prodotti tecnici acquisiti.</p>
-                                    </div>
-                                    <div class="car-section result">
-                                        <h5>Risultato</h5>
-                                        <p>Formazione completata per 12 Area Manager Breton su prodotti complessi.
-                                        Implementazione di procedure post-M&A che hanno garantito continuità operativa.
-                                        L'integrazione è diventata un modello di riferimento interno.</p>
-                                    </div>
-                                <button class="story-detail" data-panel-trigger="bdm-panel" aria-haspopup="dialog">
-                                    Approfondisci questa esperienza →
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Chief Operations Officer</h3>
-                            <h4>Tecnema Breton Group</h4>
-                            <p class="timeline-date">2018 - 2019</p>
-
-                            <div class="car-story">
-                                    <div class="car-section challenge">
-                                        <h5>Sfida</h5>
-                                        <p>Tecnema, PMI specializzata nel fine linea ceramico, doveva scalare
-                                        rapidamente per competere globalmente. Serviva un partner industriale
-                                        ma senza perdere identità e agilità.</p>
-                                    </div>
-                                    <div class="car-section action">
-                                        <h5>Azione</h5>
-                                        <p>Come socio operativo, ho implementato direttamente il Piano Industriale:
-                                        ristrutturazione organizzativa, allineamento processi operativi, espansione
-                                        rete commerciale in nuovi mercati strategici mantenendo il DNA aziendale.</p>
-                                    </div>
-                                    <div class="car-section result">
-                                        <h5>Risultato</h5>
-                                        <p>Implementazione completa del Piano Industriale approvato dal CdA.
-                                        Team passato da 30 a 36 elementi per sostenere la crescita.
-                                        Nuovi mercati: Vietnam, Brasile, India. La JV ha posto le basi per l'acquisizione successiva.</p>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>International Sales Director</h3>
-                            <h4>Tecnema Technology</h4>
-                            <p class="timeline-date">2015 - 2018</p>
-
-                            <div class="car-story">
-                                    <div class="car-section challenge">
-                                        <h5>Sfida</h5>
-                                        <p>Il 70% del fatturato dipendeva dall'export ma senza una strategia
-                                        strutturata. Mercati frammentati, partner non coordinati,
-                                        necessità di incrementare il potenziale sui mercati USA ed Europa.</p>
-                                    </div>
-                                    <div class="car-section action">
-                                        <h5>Azione</h5>
-                                        <p>Ho ridisegnato la struttura commerciale: selezione partner basata
-                                        su competenze tecniche, formazione continua, presenza diretta nelle
-                                        fiere chiave. Sviluppo di nuovi prodotti innovativi per l'immissione sul mercato.</p>
-                                    </div>
-                                    <div class="car-section result">
-                                        <h5>Risultato</h5>
-                                        <p>Crescita significativa del business internazionale in 3 anni.
-                                        Rete di 15 partner qualificati in altrettanti paesi.
-                                        Sviluppo prodotti innovativi che hanno portato alla joint venture successiva.</p>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Area Sales Manager</h3>
-                            <h4>Tecnema Technology</h4>
-                            <p class="timeline-date">2013 - 2015</p>
-
-                            <div class="car-story">
-                                    <div class="car-section challenge">
-                                        <h5>Sfida</h5>
-                                        <p>Da ingegnere a commerciale: 7 paesi da gestire, culture diverse,
-                                        prodotti complessi da spiegare. Il classico salto nel vuoto che
-                                        o ti forma o ti distrugge.</p>
-                                    </div>
-                                    <div class="car-section action">
-                                        <h5>Azione</h5>
-                                        <p>Ho studiato ogni mercato, passato tempo in produzione per capire
-                                        davvero i prodotti, ascoltato i clienti più che parlare.
-                                        Costruito relazioni basate su competenza tecnica, non su pranzi.</p>
-                                    </div>
-                                    <div class="car-section result">
-                                        <h5>Risultato</h5>
-                                        <p>Acquisiti 4 clienti chiave che sono ancora reference.
-                                        Aperto il mercato dei laterizi, completamente nuovo per l'azienda.
-                                        Imparato che vendere significa prima di tutto capire.</p>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Carousel Dots -->
+                <div class="netflix-carousel__dots">
+                    <button class="netflix-carousel__dot netflix-carousel__dot--active" data-index="0" aria-label="Vai alla scheda 1"></button>
+                    <button class="netflix-carousel__dot" data-index="1" aria-label="Vai alla scheda 2"></button>
+                    <button class="netflix-carousel__dot" data-index="2" aria-label="Vai alla scheda 3"></button>
+                    <button class="netflix-carousel__dot" data-index="3" aria-label="Vai alla scheda 4"></button>
+                    <button class="netflix-carousel__dot" data-index="4" aria-label="Vai alla scheda 5"></button>
                 </div>
             </div>
         </section>

@@ -191,47 +191,57 @@ class LanguageSwitcher {
     updateExperienceSection(t) {
         const title = document.querySelector('#experience .section-title');
         if (title) title.textContent = t.experience.title;
-        
+
         const tagline = document.querySelector('#experience .text-xl');
         if (tagline) tagline.textContent = t.experience.tagline;
-        
-        // Update timeline items
-        const timelineItems = document.querySelectorAll('.timeline-item');
+
+        // Update Netflix carousel cards
+        const cards = document.querySelectorAll('.netflix-card');
         const roleKeys = ['current', 'breton', 'coo', 'salesDirector', 'areaManager'];
-        
-        timelineItems.forEach((item, index) => {
+
+        cards.forEach((card, index) => {
             if (roleKeys[index]) {
                 const role = t.experience.roles[roleKeys[index]];
-                
-                // Update title and company
-                const h3 = item.querySelector('h3');
-                if (h3) h3.textContent = role.title;
-                
-                const h4 = item.querySelector('h4');
-                if (h4 && role.company) h4.textContent = role.company;
-                
-                const date = item.querySelector('.timeline-date');
+
+                const cardTitle = card.querySelector('.netflix-card__title');
+                if (cardTitle) cardTitle.textContent = role.title;
+
+                const company = card.querySelector('.netflix-card__company');
+                if (company && role.company) company.textContent = role.company;
+
+                const date = card.querySelector('.netflix-card__date');
                 if (date) date.textContent = role.date;
-                
-                // Update CAR sections
-                const carSections = item.querySelectorAll('.car-section');
+
+                // Update preview
+                const preview = card.querySelector('.netflix-card__preview p');
+                if (preview && role.preview) preview.textContent = role.preview;
+
+                // Update badge
+                const badge = card.querySelector('.netflix-card__badge');
+                if (badge && role.badge) badge.textContent = role.badge;
+
+                // Update expand button text
+                const expandText = card.querySelector('.netflix-card__expand-text');
+                if (expandText) {
+                    const isExpanded = card.classList.contains('netflix-card--expanded');
+                    expandText.textContent = isExpanded
+                        ? (t.experience.closeLabel || 'Chiudi')
+                        : (t.experience.expandLabel || 'Scopri di più');
+                }
+
+                // Update detail sections
+                const detailSections = card.querySelectorAll('.netflix-card__detail-section');
                 const carKeys = ['challenge', 'action', 'result'];
-                
-                carSections.forEach((section, carIndex) => {
+
+                detailSections.forEach((section, carIndex) => {
                     const h5 = section.querySelector('h5');
                     const p = section.querySelector('p');
-                    
+
                     if (carKeys[carIndex] && role[carKeys[carIndex]]) {
                         if (h5) h5.textContent = role[carKeys[carIndex]].title;
                         if (p) p.textContent = role[carKeys[carIndex]].desc;
                     }
                 });
-                
-                // Update detail button if exists
-                const detailBtn = item.querySelector('.story-detail');
-                if (detailBtn && role.detailBtn) {
-                    detailBtn.textContent = role.detailBtn;
-                }
             }
         });
     }
