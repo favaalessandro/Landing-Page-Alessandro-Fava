@@ -387,7 +387,7 @@ class NetflixCarousel {
         this.cards = Array.from(this.carousel.querySelectorAll('.netflix-card'));
         this.arrowLeft = this.carousel.querySelector('.netflix-carousel__arrow--left');
         this.arrowRight = this.carousel.querySelector('.netflix-carousel__arrow--right');
-        this.dots = Array.from(this.carousel.querySelectorAll('.netflix-carousel__dot'));
+        this.dots = Array.from(document.querySelectorAll('.netflix-carousel__dot'));
         this.years = Array.from(document.querySelectorAll('.netflix-timeline__year'));
         this.progressBar = document.querySelector('.netflix-timeline__progress');
 
