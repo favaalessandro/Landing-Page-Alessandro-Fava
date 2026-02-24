@@ -1637,7 +1637,7 @@ a:hover {
 }
 
 .netflix-card--expanded .netflix-card__details {
-    max-height: 600px;
+    max-height: 1200px;
     opacity: 1;
     padding-top: 20px;
 }
